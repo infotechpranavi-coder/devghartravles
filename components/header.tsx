@@ -26,7 +26,7 @@ export function Header({ transparent = false }: HeaderProps) {
     { label: 'Home', href: '/' },
     { label: 'About', href: '/about' },
     { label: 'Tour Packages', href: '/packages' },
-    { label: 'Terms', href: '/terms' },
+    { label: 'Contact', href: '/contact' },
   ]
 
   const isSolid = !transparent || scrolled || mobileMenuOpen

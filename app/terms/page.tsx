@@ -1,6 +1,8 @@
 import { Header } from '@/components/header'
 import { Footer } from '@/components/footer'
 import { FloatingWhatsAppButton } from '@/components/floating-whatsapp-button'
+import { Reveal } from '@/components/reveal'
+import { PHONE_DISPLAY } from '@/lib/contact'
 
 export const metadata = {
   title: 'Terms & Conditions - Deoghar Travels',
@@ -80,84 +82,38 @@ export default function Terms() {
       ],
     },
     {
-      title: '9. Communication and Complaints',
+      title: '9. Dispute Resolution',
       content: [
-        'All communications should be made through official channels: phone, email, or WhatsApp.',
-        'Complaints should be reported immediately to the tour guide and documented.',
-        'Formal complaints should be submitted within 7 days of tour completion for proper resolution.',
-        'We are committed to resolving issues fairly and promptly.',
+        'Any disputes arising from these terms shall first be attempted to be resolved amicably through negotiation.',
+        'If unresolved, disputes will be subject to the jurisdiction of courts in Deoghar, Jharkhand.',
+        'These terms are governed by the laws of India.',
       ],
     },
     {
-      title: '10. Privacy and Data Protection',
+      title: '10. Contact Information',
       content: [
-        'Personal information collected during booking is used solely for tour administration and communication.',
-        'We do not share traveler information with third parties without consent.',
-        'Contact information may be used for post-tour follow-up and feedback collection.',
-        'Travelers can request deletion of their data after the tour completion.',
-      ],
-    },
-    {
-      title: '11. Special Requests and Customizations',
-      content: [
-        'Special requests (dietary, religious, accessibility) should be communicated during booking.',
-        'While we make every effort to accommodate requests, some may not be possible.',
-        'Custom packages require separate discussion and quotation.',
-        'Additional charges may apply for special arrangements.',
-      ],
-    },
-    {
-      title: '12. Force Majeure',
-      content: [
-        'Deoghar Travels is not liable for losses due to acts of God, natural disasters, pandemics, wars, or government actions.',
-        'In such cases, customers will be offered alternative tour dates or full refund of payments.',
-        'Insurance claims (if applicable) must be handled by the traveler directly.',
-      ],
-    },
-    {
-      title: '13. Governing Law and Jurisdiction',
-      content: [
-        'These terms and conditions are governed by the laws of India.',
-        'Any disputes shall be resolved through mutual agreement and negotiation.',
-        'If unresolved, disputes shall be subject to the jurisdiction of courts in Deoghar, Jharkhand.',
-      ],
-    },
-    {
-      title: '14. Contact Information',
-      content: [
-        'For inquiries, bookings, or complaints, contact us at:',
-        'Phone: +91 9835875097',
-        'Email: info@deoghar-travels.com',
-        'WhatsApp: https://wa.me/919835875097',
-        'Address: Deoghar, Jharkhand, India',
+        `For questions about these terms, contact us at +91 ${PHONE_DISPLAY} or info@deoghar-travels.com.`,
+        'Our office hours are 8:00 AM – 8:00 PM IST, seven days a week.',
       ],
     },
   ]
 
   const faqs = [
     {
-      q: 'What if I need to cancel my tour?',
-      a: 'Please refer to Section 2 for our cancellation policy. Contact us immediately to process your cancellation.',
+      q: 'Can I modify my booking after confirmation?',
+      a: 'Yes, modifications are possible subject to availability and may incur additional charges depending on the changes requested.',
     },
     {
-      q: 'Do you offer group discounts?',
-      a: 'Yes! Groups of 10+ people are eligible for special discounts. Contact us for custom group pricing.',
+      q: 'Is travel insurance mandatory?',
+      a: 'While not mandatory, we strongly recommend purchasing travel and medical insurance for your pilgrimage journey.',
     },
     {
-      q: 'Can I customize my tour package?',
-      a: 'Absolutely! We offer fully customizable packages. Discuss your requirements with our team to create your ideal tour.',
+      q: 'What documents do I need to carry?',
+      a: 'A valid government-issued photo ID is required. Additional permits may be needed for certain temple areas.',
     },
     {
-      q: 'Is travel insurance included?',
-      a: 'No, but we recommend purchasing comprehensive travel insurance. We can help arrange it if needed.',
-    },
-    {
-      q: 'What if the weather is bad during the tour?',
-      a: 'We adapt the itinerary while maintaining the spiritual essence of the tour. Alternative activities of equal value are provided.',
-    },
-    {
-      q: 'How can I reach you in an emergency?',
-      a: 'Call our 24/7 hotline at +91 9835875097. We also have WhatsApp and email support available round the clock.',
+      q: 'How can I contact support during my tour?',
+      a: `Call our 24/7 hotline at +91 ${PHONE_DISPLAY}. We also have WhatsApp and email support available round the clock.`,
     },
   ]
 
@@ -167,60 +123,70 @@ export default function Terms() {
 
       <section className="bg-mist pt-24">
         <div className="mx-auto max-w-7xl px-4 py-16 text-center sm:px-6 md:py-20">
-          <p className="mb-3 text-sm font-medium tracking-widest text-primary uppercase">
-            Policies
-          </p>
-          <h1 className="mb-5 font-serif text-5xl font-semibold text-foreground md:text-6xl">
-            Terms & Conditions
-          </h1>
-          <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
-            Please read these terms carefully before booking your pilgrimage tour with Deoghar
-            Travels
-          </p>
+          <Reveal direction="up">
+            <p className="mb-3 font-accent text-sm font-medium tracking-widest text-primary uppercase">
+              Policies
+            </p>
+            <h1 className="mb-5 font-serif text-5xl font-semibold text-foreground md:text-6xl">
+              Terms & Conditions
+            </h1>
+            <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
+              Please read these terms carefully before booking your pilgrimage tour with Deoghar
+              Travels
+            </p>
+          </Reveal>
         </div>
       </section>
 
       <section className="flex-1 px-4 py-16 md:py-20">
-        <div className="mx-auto max-w-3xl space-y-10">
-          {sections.map((section) => (
-            <article key={section.title} className="card-modern p-7 md:p-8">
-              <h2 className="mb-5 font-serif text-2xl font-semibold text-foreground">
-                {section.title}
-              </h2>
-              <ul className="space-y-4">
-                {section.content.map((item) => (
-                  <li key={item} className="flex gap-3">
-                    <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
-                    <p className="leading-relaxed text-muted-foreground">{item}</p>
-                  </li>
-                ))}
-              </ul>
-            </article>
+        <div className="mx-auto max-w-3xl space-y-8">
+          {sections.map((section, index) => (
+            <Reveal key={section.title} delay={index * 60} direction="up">
+              <article className="card-modern p-7 md:p-8">
+                <h2 className="mb-5 font-serif text-2xl font-semibold text-foreground">
+                  {section.title}
+                </h2>
+                <ul className="space-y-4">
+                  {section.content.map((item) => (
+                    <li key={item} className="flex gap-3">
+                      <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
+                      <p className="leading-relaxed text-muted-foreground">{item}</p>
+                    </li>
+                  ))}
+                </ul>
+              </article>
+            </Reveal>
           ))}
 
-          <div className="card-modern card-modern-featured px-6 py-6 md:px-8">
-            <p className="text-sm text-muted-foreground">
-              <strong className="text-foreground">Last Updated:</strong> January 2024
-            </p>
-            <p className="mt-2 text-sm text-muted-foreground">
-              Deoghar Travels reserves the right to update these terms and conditions at any time.
-              Changes will be communicated to registered users via email.
-            </p>
-          </div>
+          <Reveal delay={120} direction="up">
+            <div className="card-modern card-modern-featured px-6 py-6 md:px-8">
+              <p className="text-sm text-muted-foreground">
+                <strong className="text-foreground">Last Updated:</strong> January 2024
+              </p>
+              <p className="mt-2 text-sm text-muted-foreground">
+                Deoghar Travels reserves the right to update these terms and conditions at any time.
+                Changes will be communicated to registered users via email.
+              </p>
+            </div>
+          </Reveal>
         </div>
       </section>
 
       <section className="bg-section-alt px-4 py-20 md:py-28">
         <div className="mx-auto max-w-3xl">
-          <h2 className="mb-10 text-center font-serif text-3xl font-semibold text-foreground md:text-4xl">
-            Frequently Asked Questions
-          </h2>
+          <Reveal>
+            <h2 className="mb-10 text-center font-serif text-3xl font-semibold text-foreground md:text-4xl">
+              Frequently Asked Questions
+            </h2>
+          </Reveal>
           <div className="space-y-4">
-            {faqs.map((item) => (
-              <div key={item.q} className="card-modern p-6">
-                <h3 className="mb-2 font-semibold text-foreground">{item.q}</h3>
-                <p className="text-sm leading-relaxed text-muted-foreground">{item.a}</p>
-              </div>
+            {faqs.map((item, index) => (
+              <Reveal key={item.q} delay={index * 80} direction="up">
+                <div className="card-modern p-6">
+                  <h3 className="mb-2 font-semibold text-foreground">{item.q}</h3>
+                  <p className="text-sm leading-relaxed text-muted-foreground">{item.a}</p>
+                </div>
+              </Reveal>
             ))}
           </div>
         </div>

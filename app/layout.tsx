@@ -2,6 +2,7 @@ import { Analytics } from '@vercel/analytics/next'
 import type { Metadata, Viewport } from 'next'
 import { Fraunces, Manrope, Space_Grotesk } from 'next/font/google'
 import { MobileBottomBar } from '@/components/mobile-bottom-bar'
+import { GlobalSectionAnimations } from '@/components/global-section-animations'
 import './globals.css'
 
 const manrope = Manrope({
@@ -68,6 +69,7 @@ export default function RootLayout({
     <html lang="en" className={`${manrope.variable} ${fraunces.variable} ${spaceGrotesk.variable}`}>
       <body className="antialiased font-sans bg-background text-foreground pb-24 md:pb-0">
         {children}
+        <GlobalSectionAnimations />
         <MobileBottomBar />
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>
