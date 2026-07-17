@@ -25,7 +25,7 @@ const testimonials = [
     name: 'Amit Kumar',
     role: 'Pilgrim',
     quote:
-      'Best travel agency in Deoghar for pilgrimage packages. Hotel booking and local transfers were completely hassle-free.',
+      'Best car rental service in Deoghar. Clean vehicle, fair pricing, and smooth local transfers for our temple visit.',
     image:
       'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=400&q=80',
   },

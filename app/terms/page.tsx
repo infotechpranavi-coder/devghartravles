@@ -6,7 +6,7 @@ import { PHONE_DISPLAY } from '@/lib/contact'
 
 export const metadata = {
   title: 'Terms & Conditions - Deoghar Travels',
-  description: 'Read our terms and conditions for tour packages and services at Deoghar Travels.',
+  description: 'Read our terms and conditions for car rental and taxi services at Deoghar Travels.',
 }
 
 export default function Terms() {

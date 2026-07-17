@@ -50,9 +50,9 @@ export default function Packages() {
   const places = [
     {
       name: 'Baba Baidyanath Dham Temple',
-      vehicle: 'Deoghar Local Travel Agency',
+      vehicle: 'Local Taxi & Car Hire',
       description:
-        'One of the twelve Jyotirlingas in India and a holy site for pilgrims, especially during Shravan Mela. Our seasoned drivers know the correct drop-off points nearest to the temple entrance so you can avoid parking stress and congestion in the busy lanes.',
+        'One of the twelve Jyotirlingas in India and a holy site for pilgrims, especially during Shravan Mela. Our drivers know the correct drop-off points nearest to the temple entrance so you can avoid parking stress and congestion in the busy lanes.',
       image:
         'https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=900&q=80',
     },
@@ -139,10 +139,10 @@ export default function Packages() {
   ]
 
   const inclusions = [
-    'Pick up from your location',
-    'Hotel accommodations (3 to 5-star hotels at good prices)',
-    'Sightseeing arrangements',
-    'Drop-off activities',
+    'Pickup from your location',
+    'Clean AC vehicle with driver',
+    'Local sightseeing & route guidance',
+    'Drop at your preferred destination',
   ]
 
   const pickups = [
@@ -194,7 +194,7 @@ export default function Packages() {
               Car Rental Company in Deoghar
             </p>
             <h1 className="mb-5 max-w-4xl font-serif text-5xl font-bold leading-[1.05] text-white text-balance md:text-7xl">
-              Deoghar Tour Packages
+              Car Rentals & Popular Routes
             </h1>
             <p className="mb-8 max-w-2xl font-sans text-lg text-white/80 md:text-xl">
               Explore scenic valleys, serene dams, sacred temples, and iconic tourist sites with

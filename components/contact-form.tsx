@@ -136,11 +136,11 @@ Message: ${formData.message}`
           >
             <option>Car Rental</option>
             <option>Local Taxi</option>
-            <option>Temple Tour Package</option>
+            <option>Outstation Taxi</option>
             <option>Airport / Railway Transfer</option>
             <option>Tempo Traveller / Bus</option>
-            <option>Hotel Booking Help</option>
-            <option>Custom Trip</option>
+            <option>Wedding / Corporate Hire</option>
+            <option>Custom Booking</option>
           </select>
         </div>
       </div>
@@ -156,7 +156,7 @@ Message: ${formData.message}`
           rows={5}
           value={formData.message}
           onChange={handleChange}
-          placeholder="Tell us your travel dates, group size, and pickup location..."
+          placeholder="Tell us your travel dates, vehicle type, group size, and pickup location..."
           className={`${inputClass} resize-none`}
         />
       </div>

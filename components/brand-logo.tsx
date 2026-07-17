@@ -17,7 +17,7 @@ export function BrandLogo({
     <div className={`flex items-center gap-3 ${className}`}>
       <Image
         src="/logo.png"
-        alt="Deoghar Travel Guide"
+        alt="Deoghar Car Rental"
         width={size}
         height={size}
         className="h-auto w-auto object-contain"
@@ -38,7 +38,7 @@ export function BrandLogo({
               textLight ? 'text-white/70' : 'text-muted-foreground'
             }`}
           >
-            Travel Guide
+            Car Rental
           </p>
         </div>
       )}

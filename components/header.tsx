@@ -3,8 +3,8 @@
 import Link from 'next/link'
 import { Menu, Phone, X } from 'lucide-react'
 import { useEffect, useState } from 'react'
-import { PHONE_TEL } from '@/lib/contact'
 import { BrandLogo } from '@/components/brand-logo'
+import { EnquiryButton } from '@/components/enquiry-popup'
 
 interface HeaderProps {
   transparent?: boolean
@@ -25,7 +25,7 @@ export function Header({ transparent = false }: HeaderProps) {
   const navLinks = [
     { label: 'Home', href: '/' },
     { label: 'About', href: '/about' },
-    { label: 'Tour Packages', href: '/packages' },
+    { label: 'Car Rentals', href: '/packages' },
     { label: 'Contact', href: '/contact' },
   ]
 
@@ -62,8 +62,7 @@ export function Header({ transparent = false }: HeaderProps) {
           </nav>
 
           <div className="flex items-center gap-3">
-            <a
-              href={`tel:${PHONE_TEL}`}
+            <EnquiryButton
               className={`hidden items-center gap-2 rounded-lg px-4 py-2.5 font-accent text-base font-semibold sm:flex ${
                 isSolid
                   ? 'bg-primary text-primary-foreground hover:bg-primary-light'
@@ -72,7 +71,7 @@ export function Header({ transparent = false }: HeaderProps) {
             >
               <Phone size={16} />
               Call Now
-            </a>
+            </EnquiryButton>
 
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -96,13 +95,12 @@ export function Header({ transparent = false }: HeaderProps) {
                 {link.label}
               </Link>
             ))}
-            <a
-              href={`tel:${PHONE_TEL}`}
+            <EnquiryButton
               className="mt-2 flex w-fit items-center gap-2 rounded-lg bg-primary px-4 py-2.5 text-sm font-semibold text-primary-foreground"
             >
               <Phone size={16} />
               Call Now
-            </a>
+            </EnquiryButton>
           </nav>
         )}
       </div>

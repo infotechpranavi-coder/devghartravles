@@ -54,24 +54,25 @@ export function Footer() {
   const quickLinks = [
     { label: 'Home', href: '/' },
     { label: 'About Us', href: '/about' },
-    { label: 'Tour Packages', href: '/packages' },
+    { label: 'Car Rentals', href: '/packages' },
+    { label: 'Our Fleet', href: '/#fleet' },
     { label: 'Contact Us', href: '/contact' },
     { label: 'Terms & Conditions', href: '/terms' },
   ]
 
   const services = [
-    'Car & Coach Rentals',
-    'Local Taxi Service',
-    'Bus Booking',
-    'Hotel Booking',
-    'Wedding Car Hire',
-    'Corporate Rentals',
+    'Sedan & Dzire on Rent',
+    'Ertiga & Scorpio Hire',
+    'Innova Crysta Rental',
+    'Tempo Traveller Rent',
+    'Bus on Rent',
+    'Airport & Station Transfer',
   ]
 
   const handleSubscribe = (e: React.FormEvent) => {
     e.preventDefault()
     if (!email.trim()) return
-    const message = `Hello! Please add me to your travel updates.\nEmail: ${email.trim()}`
+    const message = `Hello! Please add me to your car rental updates.\nEmail: ${email.trim()}`
     window.open(`${WHATSAPP_LINK}?text=${encodeURIComponent(message)}`, '_blank')
     setEmail('')
   }
@@ -106,14 +107,14 @@ export function Footer() {
                     <h3 className="font-serif text-xl font-bold text-foreground">
                       Deoghar Travels
                     </h3>
-                    <p className="font-accent text-xs font-medium tracking-widest text-primary uppercase">
-                      Travel Guide
-                    </p>
+                  <p className="font-accent text-xs font-medium tracking-widest text-primary uppercase">
+                    Car Rental
+                  </p>
                   </div>
                 </div>
                 <p className="mb-6 text-sm leading-relaxed text-muted-foreground">
-                  Taxi, car rental, temple tours, transfers & curated trips across Deoghar — with
-                  comfort and care.
+                  Car rental company in Deoghar for taxi, SUV, Tempo Traveller & bus hire — local
+                  sightseeing, transfers, and outstation trips.
                 </p>
                 <p className="mb-3 text-sm font-semibold text-foreground">Social Media:</p>
                 <div className="flex items-center gap-2">

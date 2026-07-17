@@ -17,7 +17,7 @@ import {
 export const metadata: Metadata = {
   title: 'Contact Us',
   description:
-    'Contact Deoghar Travels for taxi, car rental, temple tours, and transfers. Call or WhatsApp 9835875097.',
+    'Contact Deoghar Travels for car rental, taxi, Tempo Traveller & bus hire in Deoghar. Call or WhatsApp 9835875097.',
 }
 
 export default function ContactPage() {
@@ -82,8 +82,8 @@ export default function ContactPage() {
               Contact Us
             </h1>
             <p className="mb-8 max-w-xl font-sans text-lg text-white/80 md:text-xl">
-              Book a taxi, car rental, temple tour, or transfer in Deoghar — we&apos;re ready to help
-              you plan the trip.
+              Book a car on rent, local taxi, or outstation transfer in Deoghar — we&apos;re ready
+              to help you get moving.
             </p>
             <div className="flex flex-wrap gap-3">
               <a
@@ -164,15 +164,15 @@ export default function ContactPage() {
                 </div>
                 <h3 className="mb-3 font-serif text-3xl font-bold">We&apos;re here to help</h3>
                 <p className="mb-6 font-sans text-base text-white/75">
-                  Reach out for same-day taxi bookings, temple tour planning, airport transfers, or
-                  group vehicle hire across Deoghar.
+                  Reach out for same-day car rental, airport transfers, outstation taxi, or group
+                  Tempo Traveller and bus hire across Deoghar.
                 </p>
                 <ul className="space-y-3 text-sm text-white/85">
                   {[
                     'Quick response on call & WhatsApp',
-                    'Sedan, SUV, tempo traveller & bus',
-                    'Local sightseeing & pilgrimage support',
-                    'Hotel booking assistance available',
+                    'Sedan, SUV, Tempo Traveller & bus',
+                    'Local taxi & outstation car hire',
+                    'Airport & railway station transfers',
                   ].map((line) => (
                     <li key={line} className="flex items-start gap-2.5">
                       <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-accent" />

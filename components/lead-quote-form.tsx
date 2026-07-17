@@ -35,7 +35,7 @@ export function LeadQuoteForm({ title, subtitle, compact = false }: LeadQuoteFor
       setSubmitted(false)
     }, 3000)
 
-    const whatsappMessage = `Hello! I'm interested in learning more about your tour packages.\n\nName: ${formData.name}\nEmail: ${formData.email}\nPhone: ${formData.phone}\nMessage: ${formData.message}`
+    const whatsappMessage = `Hello! I'm interested in booking a car on rent.\n\nName: ${formData.name}\nEmail: ${formData.email}\nPhone: ${formData.phone}\nMessage: ${formData.message}`
     const encodedMessage = encodeURIComponent(whatsappMessage)
     window.open(`${WHATSAPP_LINK}?text=${encodedMessage}`, '_blank')
   }

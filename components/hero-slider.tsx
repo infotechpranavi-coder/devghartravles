@@ -2,32 +2,69 @@
 
 import { useEffect, useState } from 'react'
 import { ArrowRight, ChevronLeft, ChevronRight, Phone } from 'lucide-react'
-import { PHONE_TEL } from '@/lib/contact'
+import { PHONE_DISPLAY } from '@/lib/contact'
+import { EnquiryButton } from '@/components/enquiry-popup'
 
 const slides = [
   {
-    image:
-      'https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1920&q=80',
-    alt: 'Sacred temple towers in Deoghar',
+    image: '/fleet/sedan.jpg',
+    alt: 'Sedan car rental in Deoghar',
+    label: 'Car Rental in Deoghar',
+    title: 'Book Cars on Rent in Deoghar',
+    description:
+      'Your trusted car rental company in Deoghar — Sedan, Dzire, Ertiga, Scorpio, Innova, Tempo Traveller & Bus for local and outstation trips.',
   },
   {
-    image:
-      'https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?auto=format&fit=crop&w=1920&q=80',
-    alt: 'Car travel through scenic roads',
+    image: '/fleet/dzire.jpg',
+    alt: 'Maruti Suzuki Dzire for local taxi',
+    label: 'Maruti Suzuki Dzire',
+    title: 'Dzire on Rent for Local Taxi',
+    description:
+      'Book Dzire for airport, railway, and city transfers. Clean cars, fair pricing, and on-time pickups in Deoghar.',
   },
   {
-    image:
-      'https://images.unsplash.com/photo-1561361513-2d000a50f0dc?auto=format&fit=crop&w=1920&q=80',
-    alt: 'Pilgrims visiting Deoghar temples',
+    image: '/fleet/ertiga.jpg',
+    alt: 'Maruti Suzuki Ertiga for family trips',
+    label: 'Maruti Suzuki Ertiga',
+    title: 'Ertiga Car Rental for Families',
+    description:
+      'Spacious 6–7 seater MUV on rent for family trips, sightseeing, and comfortable group travel across Deoghar.',
   },
   {
-    image:
-      'https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=1920&q=80',
-    alt: 'Family road trip adventure',
+    image: '/fleet/scorpio.jpg',
+    alt: 'Mahindra Scorpio N for outstation travel',
+    label: 'Mahindra Scorpio N',
+    title: 'Scorpio on Rent for Outstation',
+    description:
+      'SUV car rental for Deoghar to Sultanganj, Basukinath, Mandar Hills, and other highway routes.',
+  },
+  {
+    image: '/fleet/innova.jpg',
+    alt: 'Toyota Innova Crysta for Deoghar trips',
+    label: 'Toyota Innova Crysta',
+    title: 'Innova Crysta Car Rental',
+    description:
+      'Premium 7-seater car on rent for airport transfers, temple tours, and long-distance comfort.',
+  },
+  {
+    image: '/fleet/tempo.jpg',
+    alt: 'Tempo Traveller for groups',
+    label: 'Force Tempo Traveller',
+    title: 'Tempo Traveller on Rent',
+    description:
+      '12–17 seater Tempo Traveller rental for groups, weddings, corporate trips, and pilgrim travel.',
+  },
+  {
+    image: '/fleet/bus.jpg',
+    alt: 'Luxury tourist bus for group travel',
+    label: 'Luxury Bus on Rent',
+    title: 'Bus Rental for Large Groups',
+    description:
+      'Book a luxury bus on rent for weddings, institutions, and multi-city group travel from Deoghar.',
   },
 ]
 
-const SLIDE_DURATION = 6000
+const SLIDE_DURATION = 5500
 
 export function HeroSlider() {
   const [current, setCurrent] = useState(0)
@@ -48,6 +85,8 @@ export function HeroSlider() {
 
   const prev = () => goTo((current - 1 + slides.length) % slides.length)
   const next = () => goTo((current + 1) % slides.length)
+
+  const active = slides[current]
 
   return (
     <section className="relative min-h-[100svh] w-full overflow-hidden">
@@ -70,51 +109,64 @@ export function HeroSlider() {
         </div>
       ))}
 
-      <div className="absolute inset-0 bg-gradient-to-b from-secondary/70 via-secondary/45 to-secondary/80" />
-      <div className="absolute inset-0 bg-gradient-to-r from-secondary/50 via-transparent to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-b from-secondary/75 via-secondary/50 to-secondary/85" />
+      <div className="absolute inset-0 bg-gradient-to-r from-secondary/70 via-secondary/30 to-transparent" />
 
-      <div className="relative z-10 flex min-h-[100svh] flex-col justify-center pb-24 pt-24">
+      <div className="relative z-10 flex min-h-[100svh] flex-col justify-center pb-28 pt-24">
         <div className="mx-auto w-full max-w-7xl px-4 sm:px-6">
-          <p className="animate-fade-in-up mb-3 font-accent text-lg font-semibold tracking-[0.14em] uppercase text-accent md:text-xl">
-            Deoghar Travel Guide
+          <p className="mb-3 font-accent text-base font-semibold tracking-[0.16em] text-white/80 uppercase md:text-lg">
+            Car Rental Company in Deoghar
           </p>
-          <h1 className="animate-fade-in-up delay-100 mb-5 max-w-3xl font-serif text-5xl font-bold leading-[1.1] text-white text-balance sm:text-6xl md:text-7xl lg:text-8xl">
-            Call and Book Your Dream Trip Now
+          <p
+            key={`label-${current}`}
+            className="animate-fade-in-up mb-3 font-accent text-lg font-semibold tracking-[0.14em] uppercase text-accent md:text-xl"
+          >
+            {active.label}
+          </p>
+          <h1
+            key={`title-${current}`}
+            className="animate-fade-in-up delay-100 mb-5 max-w-3xl font-serif text-4xl font-bold leading-[1.1] text-white text-balance sm:text-5xl md:text-6xl lg:text-7xl"
+          >
+            {active.title}
           </h1>
-          <p className="animate-fade-in-up delay-200 mb-8 max-w-xl font-sans text-lg leading-relaxed text-white/85 md:text-xl">
-            Trusted Deoghar travel agency for taxi, car rental, temple tours, airport transfers, and
-            group trips — planned with comfort and care.
+          <p
+            key={`desc-${current}`}
+            className="animate-fade-in-up delay-200 mb-8 max-w-xl font-sans text-lg leading-relaxed text-white/85 md:text-xl"
+          >
+            {active.description}
           </p>
           <div className="animate-fade-in-up delay-300 flex flex-col gap-3 sm:flex-row sm:items-center">
-            <a
-              href={`tel:${PHONE_TEL}`}
+            <EnquiryButton
+              vehicle={active.label}
               className="inline-flex items-center justify-center gap-2 rounded-lg bg-primary px-7 py-3.5 font-accent text-base font-semibold text-primary-foreground hover:bg-primary-light"
             >
               <Phone size={18} />
-              Call 9835875097
-            </a>
-            <a
-              href={`tel:${PHONE_TEL}`}
+              Call {PHONE_DISPLAY}
+            </EnquiryButton>
+            <EnquiryButton
+              vehicle={active.label}
               className="inline-flex items-center justify-center gap-2 rounded-lg border border-white/40 bg-white/10 px-7 py-3.5 font-accent text-base font-semibold text-white backdrop-blur-sm hover:bg-white/20"
             >
-              Get a Free Quote
+              Book Enquiry
               <ArrowRight size={18} />
-            </a>
+            </EnquiryButton>
           </div>
         </div>
       </div>
 
       <div className="absolute bottom-8 left-0 right-0 z-20 px-4 sm:px-6">
         <div className="mx-auto flex max-w-7xl items-center justify-between gap-4">
-          <div className="flex items-center gap-2">
-            {slides.map((_, index) => (
+          <div className="flex max-w-[70%] flex-wrap items-center gap-2">
+            {slides.map((slide, index) => (
               <button
-                key={index}
+                key={slide.image}
                 type="button"
                 onClick={() => goTo(index)}
-                aria-label={`Go to slide ${index + 1}`}
+                aria-label={`Go to ${slide.label}`}
                 className={`h-1.5 overflow-hidden rounded-full transition-all ${
-                  index === current ? 'w-12 bg-white/30' : 'w-1.5 bg-white/40 hover:bg-white/70'
+                  index === current
+                    ? 'w-10 bg-white/30 sm:w-12'
+                    : 'w-1.5 bg-white/40 hover:bg-white/70'
                 }`}
               >
                 {index === current && (

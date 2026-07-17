@@ -22,60 +22,60 @@ import {
 
 export const metadata: Metadata = {
   title: {
-    absolute: 'Best Deoghar Tour & Travels Company in India for Safe & Comfortable Rides',
+    absolute: 'About Deoghar Travels | Best Car Rental Company in Deoghar',
   },
   description:
-    'Looking for Deoghar Tour & Travels Company in India? With 5+ years of expertise and multiple 5-star reviews, Deoghar Travels is your go-to choice. Book us now.',
+    'Deoghar Travels is a trusted car rental company in Deoghar with 5+ years of experience. Book Sedan, SUV, Tempo Traveller & Bus for local and outstation trips.',
   keywords:
-    'Deoghar Tour & Travels Company, Book Car and Bus on rent Sultanganj to Deoghar, Deoghar Tour and Travels, Car Rental Company in Deoghar, Deoghar one way taxi, Deoghar round trip taxi',
+    'Car Rental Company in Deoghar, Book Car and Bus on rent Sultanganj to Deoghar, Deoghar one way taxi, Deoghar round trip taxi, taxi service Deoghar',
 }
 
 export default function About() {
   const apartPoints = [
     {
       icon: Sparkles,
-      title: 'Soulful Travel Planning',
+      title: 'Clean & Ready Fleet',
       description:
-        'At Deoghar Tour & Travel Guide, we craft each travel to resonate with the soul of our tourists.',
+        'Well-maintained Sedan, Dzire, Ertiga, Scorpio, Innova, Tempo Traveller, and Bus ready for daily hire.',
     },
     {
       icon: HeartHandshake,
-      title: 'Detail-Focused Service',
+      title: 'On-Time Drivers',
       description:
-        'We attend to every minor and major request so our vehicle rental services are worth remembering.',
+        'Punctual pickups and polite drivers who know Deoghar temple routes, stations, and highway drops.',
     },
     {
       icon: Car,
       title: 'Reliable Car Rentals',
       description:
-        'As a reliable Car Rental Company in Deoghar, we offer pickup and drop across several places in Jharkhand.',
+        'As a car rental company in Deoghar, we offer pickup and drop across Deoghar and nearby Jharkhand cities.',
     },
     {
       icon: Bus,
       title: 'One Way & Round Trip',
       description:
-        'For local sightseeing or trips, book our Deoghar one way taxi or Deoghar round trip taxi services.',
+        'Book Deoghar one-way taxi or round-trip car hire for local sightseeing and outstation travel.',
     },
   ]
 
   const b2bServices = [
-    'Exclusive deals in hotel bookings',
-    'Marketing support',
-    'Smooth tourism industry collaboration',
-    'Incomparable value for your customer base',
+    'Fleet support for hotels & travel desks',
+    'Corporate & wedding vehicle hire',
+    'Group Tempo Traveller & bus booking',
+    'Transparent rates for partner bookings',
   ]
 
   const b2cServices = [
-    'Customized car rental packages for families and tourist groups',
-    'Deoghar outstation taxi for weddings and other festivities',
-    '24/7 customer assistance — Call or WhatsApp 9835875097',
-    'Multiple religious tours across Deoghar',
+    'Family and tourist group car rental packages',
+    'Outstation taxi for weddings and festivities',
+    '24/7 booking support — Call or WhatsApp 9835875097',
+    'Temple route taxi & local sightseeing hire',
   ]
 
   const stats = [
     { value: 5, suffix: '+', label: 'Years Expertise' },
-    { value: 5, suffix: '★', label: 'Star Reviews' },
-    { value: 250, suffix: '+', label: 'Happy Travelers' },
+    { value: 7, suffix: '', label: 'Vehicle Types' },
+    { value: 250, suffix: '+', label: 'Happy Customers' },
   ]
 
   return (
@@ -87,7 +87,7 @@ export default function About() {
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src="https://images.unsplash.com/photo-1561361513-2d000a50f0dc?auto=format&fit=crop&w=1920&q=80"
-          alt="Deoghar Tour and Travels journey"
+          alt="Car rental fleet in Deoghar"
           className="absolute inset-0 h-full w-full object-cover animate-ken-burns"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-secondary via-secondary/55 to-secondary/25" />
@@ -96,10 +96,10 @@ export default function About() {
         <div className="relative z-10 mx-auto w-full max-w-7xl px-4 pb-16 pt-32 sm:px-6 md:pb-24">
           <Reveal direction="up">
             <p className="mb-3 font-accent text-lg font-semibold tracking-[0.14em] text-accent uppercase">
-              Deoghar Tour & Travels Company
+              Car Rental Company in Deoghar
             </p>
             <h1 className="mb-5 max-w-4xl font-serif text-5xl font-bold leading-[1.05] text-white text-balance md:text-7xl">
-              Your Journey Begins with Deoghar Travels
+              Cars on Rent for Every Trip
             </h1>
             <p className="mb-8 max-w-2xl font-sans text-lg text-white/80 md:text-xl">
               Book car and bus on rent — including Sultanganj to Deoghar — for safe, comfortable, and
@@ -114,7 +114,7 @@ export default function About() {
                 Call {PHONE_DISPLAY}
               </a>
               <a
-                href={`${WHATSAPP_LINK}?text=${encodeURIComponent('Hello! I want to book with Deoghar Tour & Travels Company.')}`}
+                href={`${WHATSAPP_LINK}?text=${encodeURIComponent('Hello! I want to book a car on rent with Deoghar Travels.')}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 rounded-xl bg-accent px-6 py-3.5 font-accent text-base font-semibold text-accent-foreground hover:brightness-110"
@@ -136,18 +136,17 @@ export default function About() {
               About our company
             </p>
             <h2 className="mb-5 font-serif text-4xl font-bold leading-tight text-foreground text-balance md:text-5xl">
-              Finest travel experiences in Deoghar
+              Trusted car rental service in Deoghar
             </h2>
             <div className="space-y-4 font-sans text-lg leading-relaxed text-muted-foreground">
               <p>
-                Deoghar Tour & Travel Guide offers our tourists one of the finest travel experiences
-                in Deoghar. Our Deoghar Tour & Travels Company provides tourists with properly
-                organized and executed tours in our rental cars, buses and tempo travelers at the
-                most affordable rates.
+                Deoghar Travels is a local car rental company offering Sedan, Dzire, Ertiga, Scorpio,
+                Innova Crysta, Tempo Traveller, and Bus at affordable rates for local sightseeing,
+                airport or railway transfers, and outstation trips.
               </p>
               <p>
-                To make our clients feel valued and important, our tour agents are deeply dedicated
-                to providing them with incredible experiences in Deoghar.
+                Our team focuses on clean vehicles, on-time pickups, and clear pricing so booking a
+                taxi or car on rent in Deoghar stays simple and reliable.
               </p>
             </div>
           </Reveal>
@@ -212,16 +211,16 @@ export default function About() {
                 Our Story
               </p>
               <h2 className="mb-5 font-serif text-4xl font-bold text-foreground md:text-5xl text-balance">
-                Almost 5 years of bringing Deoghar closer to travelers
+                Almost 5 years of reliable car rental in Deoghar
               </h2>
               <div className="space-y-4 font-sans text-lg leading-relaxed text-muted-foreground">
                 <p>
-                  Almost 5 years have passed since we started our Deoghar Tour & Travels Company,
-                  which has brought out the unparalleled beauty of Deoghar.
+                  Almost 5 years have passed since we started Deoghar Travels as a car rental
+                  company focused on safe, affordable taxi and vehicle hire.
                 </p>
                 <p>
-                  We started with the aim of creating personalized and memorable travel experiences
-                  for tourists, tapping into Deoghar&apos;s spirituality, natural and cultural beauty.
+                  We help families, pilgrims, and groups book the right car for local sightseeing,
+                  station transfers, and outstation routes across Jharkhand.
                 </p>
               </div>
             </Reveal>
@@ -240,8 +239,8 @@ export default function About() {
               What Sets Us Apart
             </h2>
             <p className="font-sans text-lg text-muted-foreground">
-              Looking for Deoghar Tour & Travels Company in India? With 5+ years of expertise and
-              multiple 5-star reviews, Deoghar Travels is your go-to choice.
+              Looking for a car rental company in Deoghar? With 5+ years of experience and a ready
+              fleet, Deoghar Travels is your go-to choice for taxi and vehicle hire.
             </p>
           </Reveal>
 
@@ -283,9 +282,8 @@ export default function About() {
               </p>
               <h2 className="mb-4 font-serif text-4xl font-bold text-foreground">B2B Services</h2>
               <p className="mb-7 font-sans text-base leading-relaxed text-muted-foreground md:text-lg">
-                The B2B services of our Deoghar Tour & Travels Company are customized to enhance
-                your hotel business in the tourism industry, ensuring smooth collaboration and
-                incomparable value to you and your customer base.
+                Partner with Deoghar Travels for hotel desks, event planners, and corporate travel —
+                reliable vehicle supply for guest transfers, weddings, and group movement.
               </p>
               <ul className="space-y-3">
                 {b2bServices.map((item) => (
@@ -304,13 +302,12 @@ export default function About() {
                 <Users size={26} />
               </div>
               <p className="mb-2 font-accent text-sm font-semibold tracking-widest text-accent uppercase">
-                For travelers
+                For customers
               </p>
               <h2 className="mb-4 font-serif text-4xl font-bold text-foreground">B2C Services</h2>
               <p className="mb-7 font-sans text-base leading-relaxed text-muted-foreground md:text-lg">
-                Want to experience the extraordinary places in Deoghar? Deoghar Travels designs every
-                car and bus rental service to leave a lasting impression on your mind. All of our
-                B2C services are designed to fulfill your travel dreams in Deoghar.
+                Need a car on rent in Deoghar? From daily taxi hire to Tempo Traveller and bus
+                rental, we match the right vehicle to your trip, group size, and budget.
               </p>
               <ul className="space-y-3">
                 {b2cServices.map((item) => (
@@ -339,8 +336,8 @@ export default function About() {
                   Book Car and Bus on Rent — Sultanganj to Deoghar
                 </h2>
                 <p className="font-sans text-base text-white/75 md:text-lg">
-                  Safe and comfortable rides with our Deoghar Tour & Travels Company for
-                  pilgrimages, family trips, and group travel.
+                  Safe and comfortable car & bus rental for pilgrimages, family trips, and group
+                  travel on the Sultanganj–Deoghar route.
                 </p>
               </div>
               <a

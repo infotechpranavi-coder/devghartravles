@@ -3,6 +3,7 @@ import type { Metadata, Viewport } from 'next'
 import { Fraunces, Manrope, Space_Grotesk } from 'next/font/google'
 import { MobileBottomBar } from '@/components/mobile-bottom-bar'
 import { GlobalSectionAnimations } from '@/components/global-section-animations'
+import { EnquiryProvider } from '@/components/enquiry-popup'
 import './globals.css'
 
 const manrope = Manrope({
@@ -25,13 +26,13 @@ const spaceGrotesk = Space_Grotesk({
 
 export const metadata: Metadata = {
   title: {
-    default: 'Trusted Deoghar Travel Agency | Taxi & Car Rental Service in Deoghar',
+    default: 'Best Car Rental Company in Deoghar | Taxi & Car Hire Service',
     template: '%s | Deoghar Travels',
   },
   description:
-    'Looking for a reliable Deoghar travel agency? Book affordable car rentals for local sightseeing, airport or railway transfers, and trips. Call us at 9835875097.',
+    'Book affordable car rental in Deoghar — Sedan, Dzire, Ertiga, Scorpio, Innova, Tempo Traveller & Bus. Call 9835875097.',
   keywords:
-    'Deoghar Travel Agency, Taxi & Car Rental Service in Deoghar, Deoghar Tour and Travels, car hire Deoghar',
+    'Car Rental Company in Deoghar, taxi service Deoghar, car hire Deoghar, Tempo Traveller Deoghar',
   generator: 'v0.app',
   icons: {
     icon: [
@@ -68,9 +69,11 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${manrope.variable} ${fraunces.variable} ${spaceGrotesk.variable}`}>
       <body className="antialiased font-sans bg-background text-foreground pb-24 md:pb-0">
-        {children}
-        <GlobalSectionAnimations />
-        <MobileBottomBar />
+        <EnquiryProvider>
+          {children}
+          <GlobalSectionAnimations />
+          <MobileBottomBar />
+        </EnquiryProvider>
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>
     </html>

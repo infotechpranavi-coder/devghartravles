@@ -7,11 +7,11 @@ import { HeroSlider } from '@/components/hero-slider'
 import { Reveal } from '@/components/reveal'
 import { Testimonials } from '@/components/testimonials'
 import { CountUp } from '@/components/count-up'
-import { PHONE_DISPLAY, PHONE_TEL, WHATSAPP_LINK } from '@/lib/contact'
+import { PHONE_DISPLAY } from '@/lib/contact'
+import { EnquiryButton } from '@/components/enquiry-popup'
 import {
   ArrowRight,
   ArrowUpRight,
-  Car,
   Heart,
   Mountain,
   Phone,
@@ -23,99 +23,144 @@ import {
 } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Trusted Deoghar Travel Agency | Taxi & Car Rental Service in Deoghar',
+  title: 'Best Car Rental Company in Deoghar | Taxi & Car Hire Service',
   description:
-    'Looking for a reliable Deoghar travel agency? Book affordable car rentals for local sightseeing, airport or railway transfers, and trips. Call us at 9835875097.',
+    'Book affordable car rental in Deoghar — Sedan, Dzire, Ertiga, Scorpio, Innova, Tempo Traveller & Bus. Local taxi, airport transfers & outstation trips. Call 9835875097.',
   keywords:
-    'Deoghar Travel Agency, Taxi & Car Rental Service in Deoghar, Deoghar Tour and Travels, car hire Deoghar, local taxi Deoghar',
+    'Car Rental Company in Deoghar, taxi service Deoghar, car hire Deoghar, Dzire Scorpio Innova on rent, Tempo Traveller Deoghar, bus on rent Deoghar',
 }
 
 export default function Home() {
   const vibes = [
     {
       icon: Users,
-      title: 'Family',
-      meta: 'Car • Bus • Tempo Traveller',
-      tagline: 'Temple visits, parks & local sightseeing',
+      title: 'Family Car Rental',
+      meta: 'Sedan • Ertiga • Innova',
+      tagline: 'Comfortable cars for family trips',
       description:
-        'At our Deoghar travel agency, we offer car, bus, and tempo traveler rental services to cover temple visits, nature parks, and local sightseeing. There is a kind of charisma in this place that pulls in people of all ages.',
+        'Rent a family-friendly car in Deoghar for temple visits, parks, and local sightseeing. Choose Sedan, Ertiga, or Innova based on your group size.',
       image:
         'https://images.unsplash.com/photo-1609220136736-443140cffec6?auto=format&fit=crop&w=800&q=80',
-      alt: 'Happy family traveling together',
+      alt: 'Family car rental in Deoghar',
     },
     {
       icon: Sparkles,
-      title: 'Pilgrimage',
-      meta: 'Spiritual • Temple Tours',
-      tagline: 'Baidyanath Dham & Parasnath',
+      title: 'Pilgrimage Taxi',
+      meta: 'Local Taxi • Round Trip',
+      tagline: 'Baidyanath Dham & temple routes',
       description:
-        'Want a soul enriching spiritual journey? Deoghar opens up an exquisite window to multiple pilgrimage destinations, such as Baba Baidyanath Dham Temple and Parasnath Temple.',
+        'Book a dedicated taxi for Baidyanath Dham, Basukinath, and other temple routes with drivers who know the best drop points.',
       image:
         'https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=800&q=80',
-      alt: 'Sacred temple pilgrimage in Deoghar',
+      alt: 'Pilgrimage taxi service in Deoghar',
     },
     {
       icon: Mountain,
-      title: 'Adventure',
-      meta: 'Trekking • Nature • Hills',
-      tagline: 'Trails, walks, hills & waterfalls',
+      title: 'Outstation Car Hire',
+      meta: 'Scorpio • Innova • Highway',
+      tagline: 'Sultanganj, Dumka & nearby cities',
       description:
-        'Beyond temples, Deoghar keeps it interesting with scenic trekking trails, calm nature walks, peaceful hills, and waterfalls, so you get the adventure you are after.',
+        'Outstation car rental from Deoghar to Sultanganj, Tarapeeth, Parasnath, Mandar Hills, and other popular routes.',
       image:
         'https://images.unsplash.com/photo-1551632811-561732d1e306?auto=format&fit=crop&w=800&q=80',
-      alt: 'Adventure hiking on scenic trails',
+      alt: 'Outstation car hire from Deoghar',
     },
     {
       icon: Heart,
-      title: 'Group Travels',
-      meta: 'Community • Corporate • Excursions',
-      tagline: 'Safe & hassle-free group journeys',
+      title: 'Group Vehicle Rent',
+      meta: 'Tempo Traveller • Bus',
+      tagline: 'Weddings, corporate & large groups',
       description:
-        'Travel with ease with our travel agents in Deoghar for your community tours, corporate outings, or institutional excursions. We offer reliable travel arrangements for a safe and hassle free journey.',
+        'Rent Tempo Traveller or Bus for community tours, weddings, corporate outings, and institutional travel with spacious seating.',
       image:
         'https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=800&q=80',
-      alt: 'Group of friends traveling together',
+      alt: 'Group vehicle rental in Deoghar',
     },
   ]
 
   const stats = [
-    { value: 100, label: 'Tours' },
-    { value: 150, label: 'Stunning Places' },
-    { value: 250, label: 'Satisfied Customers' },
+    { value: 7, label: 'Vehicle Types' },
+    { value: 150, label: 'Routes Covered' },
+    { value: 250, label: 'Happy Customers' },
   ]
 
   const services = [
     {
-      title: 'Car and Coach Rentals',
-      subtitle: 'Local taxi • Airport & railway transfers',
+      title: 'Car & Coach Rentals',
+      subtitle: 'Sedan to SUV • Self-drive not needed',
       image:
         'https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?auto=format&fit=crop&w=1200&q=80',
       alt: 'Car rental service on scenic roads',
     },
     {
-      title: 'Bus Booking',
-      subtitle: 'Group travel • Pilgrimages & weddings',
+      title: 'Taxi & Transfers',
+      subtitle: 'Airport • Railway • Local pickup/drop',
       image:
-        'https://images.unsplash.com/photo-1570125909232-eb263c188f7e?auto=format&fit=crop&w=1200&q=80',
-      alt: 'Bus travel for group tours',
+        'https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&w=1200&q=80',
+      alt: 'Taxi and transfer service',
     },
     {
-      title: 'Hotel Booking',
-      subtitle: 'Luxury resorts • Budget stays',
+      title: 'Bus & Tempo Hire',
+      subtitle: 'Group travel • Weddings & tours',
       image:
-        'https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80',
-      alt: 'Comfortable hotel accommodation',
+        'https://images.unsplash.com/photo-1570125909232-eb263c188f7e?auto=format&fit=crop&w=1200&q=80',
+      alt: 'Bus and tempo traveller hire',
     },
   ]
 
-  const fleet = [
-    { name: 'Sedan Car on Rent', seats: '4 Seater', type: 'Sedan' },
-    { name: 'Dzire Car on Rent', seats: '4 Seater', type: 'Sedan' },
-    { name: 'Ertiga Car on Rent', seats: '6–7 Seater', type: 'MUV' },
-    { name: 'Scorpio Car on Rent', seats: '7 Seater', type: 'SUV' },
-    { name: 'Crysta Innova Car on Rent', seats: '7 Seater', type: 'Premium' },
-    { name: 'Tempo Traveller Rent', seats: '12–17 Seater', type: 'Group' },
-    { name: 'Bus On Rent', seats: '20+ Seater', type: 'Bus' },
+  const fleetMain = [
+    {
+      name: 'Sedan Car on Rent',
+      seats: '4 Seater',
+      type: 'Sedan',
+      image: '/fleet/sedan.jpg',
+      alt: 'White sedan car for rent in Deoghar',
+    },
+    {
+      name: 'Dzire Car on Rent',
+      seats: '4 Seater',
+      type: 'Sedan',
+      image: '/fleet/dzire.jpg',
+      alt: 'Maruti Suzuki Dzire for rent in Deoghar',
+    },
+    {
+      name: 'Ertiga Car on Rent',
+      seats: '6–7 Seater',
+      type: 'MUV',
+      image: '/fleet/ertiga.jpg',
+      alt: 'Maruti Suzuki Ertiga for rent in Deoghar',
+    },
+    {
+      name: 'Scorpio Car on Rent',
+      seats: '7 Seater',
+      type: 'SUV',
+      image: '/fleet/scorpio.jpg',
+      alt: 'Mahindra Scorpio N for rent in Deoghar',
+    },
+    {
+      name: 'Bus On Rent',
+      seats: '20+ Seater',
+      type: 'Bus',
+      image: '/fleet/bus.jpg',
+      alt: 'Luxury tourist bus for rent in Deoghar',
+    },
+    {
+      name: 'Tempo Traveller Rent',
+      seats: '12–17 Seater',
+      type: 'Group',
+      image: '/fleet/tempo.jpg',
+      alt: 'Force Tempo Traveller for rent in Deoghar',
+    },
+  ]
+
+  const fleetBelowBook = [
+    {
+      name: 'Crysta Innova Car on Rent',
+      seats: '7 Seater',
+      type: 'Premium',
+      image: '/fleet/innova.jpg',
+      alt: 'Toyota Innova Crysta for rent in Deoghar',
+    },
   ]
 
   return (
@@ -130,16 +175,16 @@ export default function Home() {
           <Reveal direction="left">
             <p className="mb-4 flex items-center gap-2 font-accent text-base font-semibold tracking-widest text-primary uppercase">
               <span className="text-lg leading-none">✦</span>
-              About Us
+              Car Rental in Deoghar
             </p>
             <h2 className="mb-5 font-serif text-5xl font-bold leading-tight text-foreground text-balance md:text-6xl">
-              Ready to escape to your dream destination?
+              Affordable cars on rent for every trip
             </h2>
             <p className="mb-8 font-sans text-lg leading-relaxed text-muted-foreground md:text-xl">
-              Our Deoghar Travel Agency is here to turn your dream into reality. Whether you are
-              planning a relaxing family getaway, a long awaited pilgrimage, arranging group trips,
-              or simply looking for adventure with your friends, Deoghar Tour & Travels offers
-              multi-amenity facilitated car rental services for all types of vacations to Deoghar.
+              Deoghar Travels is your local car rental company for Sedan, Dzire, Ertiga, Scorpio,
+              Innova Crysta, Tempo Traveller, and Bus. Book for local sightseeing, airport or
+              railway transfers, outstation taxi, and group travel — with clean vehicles and on-time
+              drivers.
             </p>
 
             <div className="mb-10 grid grid-cols-1 gap-6 sm:grid-cols-2">
@@ -149,10 +194,10 @@ export default function Home() {
                 </div>
                 <div>
                   <h3 className="mb-1 font-sans text-lg font-semibold text-foreground">
-                    Built for Every Traveler
+                    Wide Vehicle Range
                   </h3>
                   <p className="text-base leading-relaxed text-muted-foreground">
-                    Family trips, pilgrimages, and group tours with reliable car rental support.
+                    From 4-seater sedan to bus — pick the right car for your group and route.
                   </p>
                 </div>
               </div>
@@ -162,10 +207,10 @@ export default function Home() {
                 </div>
                 <div>
                   <h3 className="mb-1 font-sans text-lg font-semibold text-foreground">
-                    Comfort Without Compromise
+                    Local & Outstation
                   </h3>
                   <p className="text-base leading-relaxed text-muted-foreground">
-                    Clean vehicles, on-time pickups, and local expertise across Deoghar.
+                    City taxi, one-way, round trip, and outstation car hire across Jharkhand.
                   </p>
                 </div>
               </div>
@@ -229,15 +274,14 @@ export default function Home() {
         <div className="mx-auto max-w-7xl">
           <Reveal className="mb-12 md:mb-14">
             <p className="mb-3 font-accent text-base font-medium tracking-widest text-primary uppercase">
-              Travel styles
+              Hire by trip type
             </p>
             <h2 className="mb-4 font-serif text-5xl font-bold text-foreground md:text-6xl">
-              Pick Your Travel Vibe
+              Choose Your Rental Need
             </h2>
             <p className="max-w-3xl font-sans text-lg text-muted-foreground">
-              Whether you are a thrill seeker, trying to spend leisure time with your family, or maybe
-              you are just a culture explorer, your perfect trip to Deoghar is right here. Contact
-              our Deoghar Tour and Travel agency for your next trip today.
+              Whether you need a local taxi, family car, outstation SUV, or group Tempo Traveller —
+              book the right vehicle from our Deoghar car rental fleet.
             </p>
           </Reveal>
 
@@ -293,12 +337,12 @@ export default function Home() {
                           View Details
                           <ArrowRight size={16} />
                         </Link>
-                        <a
-                          href={`tel:${PHONE_TEL}`}
+                        <EnquiryButton
+                          vehicle={vibe.title}
                           className="inline-flex items-center gap-2 rounded-xl border border-foreground/20 bg-card px-5 py-2.5 font-accent text-sm font-semibold text-foreground hover:border-primary hover:text-primary"
                         >
                           Enquire Now
-                        </a>
+                        </EnquiryButton>
                       </div>
                     </div>
                   </article>
@@ -332,24 +376,23 @@ export default function Home() {
         <div className="mx-auto max-w-7xl">
           <Reveal className="mx-auto mb-14 max-w-2xl text-center" direction="up">
             <p className="mb-3 font-accent text-base font-medium tracking-widest text-primary uppercase">
-              What we offer
+              Our services
             </p>
             <h2 className="mb-4 font-serif text-5xl font-bold text-foreground md:text-6xl">
-              Explore Our Travel Services
+              Car Rental Services in Deoghar
             </h2>
             <p className="font-sans text-lg text-muted-foreground">
-              Our Deoghar Tour and Travel vehicle rental services cover several places across
-              Deoghar. We also take responsibility for hotel booking, pick up, and drop off to your
-              desired locations.
+              From daily taxi hire to outstation cars and group buses — we provide reliable vehicle
+              rental with pickup and drop across Deoghar and nearby cities.
             </p>
           </Reveal>
 
           <div className="grid grid-cols-1 gap-5 md:grid-cols-3 md:gap-6">
             {services.map((service, index) => (
               <Reveal key={service.title} delay={index * 140} direction="up">
-                <a
-                  href={`tel:${PHONE_TEL}`}
-                  className="group relative block h-[420px] overflow-hidden rounded-[1.75rem] shadow-[0_12px_40px_-16px_rgba(15,39,64,0.35)] transition-transform duration-500 hover:-translate-y-2 sm:h-[460px]"
+                <EnquiryButton
+                  vehicle={service.title}
+                  className="group relative block h-[420px] w-full overflow-hidden rounded-[1.75rem] text-left shadow-[0_12px_40px_-16px_rgba(15,39,64,0.35)] transition-transform duration-500 hover:-translate-y-2 sm:h-[460px]"
                 >
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
@@ -369,7 +412,7 @@ export default function Home() {
                         {service.subtitle}
                       </p>
                       <p className="font-accent text-xs font-semibold tracking-[0.18em] text-white/75 uppercase transition-colors group-hover:text-accent">
-                        Explore Options
+                        Enquire Now
                       </p>
                     </div>
 
@@ -377,7 +420,7 @@ export default function Home() {
                       <ArrowRight size={22} className="transition-transform duration-500 group-hover:translate-x-0.5" />
                     </span>
                   </div>
-                </a>
+                </EnquiryButton>
               </Reveal>
             ))}
           </div>
@@ -385,7 +428,7 @@ export default function Home() {
       </section>
 
       {/* Fleet */}
-      <section className="bg-section-alt px-4 py-20 md:py-28">
+      <section id="fleet" className="scroll-mt-24 bg-section-alt px-4 py-20 md:py-28">
         <div className="mx-auto max-w-7xl">
           <Reveal className="mb-12 md:mb-14">
             <p className="mb-3 font-accent text-base font-medium tracking-widest text-primary uppercase">
@@ -400,61 +443,105 @@ export default function Home() {
             </p>
           </Reveal>
 
-          <div className="grid grid-cols-1 gap-8 lg:grid-cols-[1.4fr_0.9fr] lg:items-start">
+          <div className="grid grid-cols-1 gap-8 lg:grid-cols-[1.45fr_0.85fr] lg:items-start">
             <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-              {fleet.map((vehicle, index) => (
+              {fleetMain.map((vehicle, index) => (
                 <Reveal key={vehicle.name} delay={index * 70} direction="up">
-                  <div className="card-modern group flex h-full items-center gap-4 p-5">
-                    <div className="card-icon !h-12 !w-12 shrink-0 !rounded-xl">
-                      <Car size={20} />
+                  <article className="group overflow-hidden rounded-[1.35rem] border border-primary/10 bg-card shadow-[0_10px_28px_-16px_rgba(20,110,150,0.18)] transition-all duration-500 hover:-translate-y-1 hover:border-primary/25 hover:shadow-[0_18px_40px_-18px_rgba(20,110,150,0.3)]">
+                    <div className="relative aspect-[16/10] overflow-hidden">
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
+                      <img
+                        src={vehicle.image}
+                        alt={vehicle.alt}
+                        className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-secondary/70 via-transparent to-transparent" />
+                      <span className="absolute left-3 top-3 rounded-full bg-white/90 px-2.5 py-1 font-accent text-[10px] font-semibold tracking-wide text-primary uppercase backdrop-blur-sm">
+                        {vehicle.type}
+                      </span>
                     </div>
-                    <div className="min-w-0">
-                      <p className="font-accent text-base font-semibold text-foreground">
-                        {vehicle.name}
-                      </p>
-                      <p className="mt-0.5 text-sm text-muted-foreground">
-                        {vehicle.type} · {vehicle.seats}
-                      </p>
+                    <div className="flex items-center justify-between gap-3 p-4">
+                      <div className="min-w-0">
+                        <p className="font-accent text-base font-semibold text-foreground">
+                          {vehicle.name}
+                        </p>
+                        <p className="mt-0.5 text-sm text-muted-foreground">{vehicle.seats}</p>
+                      </div>
+                      <EnquiryButton
+                        vehicle={vehicle.name}
+                        className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary text-primary-foreground hover:bg-primary-light"
+                        aria-label={`Book ${vehicle.name}`}
+                      >
+                        <ArrowRight size={16} />
+                      </EnquiryButton>
                     </div>
-                  </div>
+                  </article>
                 </Reveal>
               ))}
             </div>
 
-            <Reveal delay={150} direction="right">
-              <div className="overflow-hidden rounded-[1.75rem] bg-secondary p-8 text-white shadow-xl md:p-10">
-                <p className="mb-2 font-accent text-sm font-semibold tracking-[0.16em] text-accent uppercase">
-                  Book now
-                </p>
-                <h3 className="mb-3 font-serif text-3xl font-bold md:text-4xl">
-                  Ready for your next Deoghar trip?
-                </h3>
-                <p className="mb-8 font-sans text-base text-white/75">
-                  Call or WhatsApp us to reserve Sedan, Dzire, Ertiga, Scorpio, Innova Crysta, Tempo
-                  Traveller, or Bus — available for local sightseeing and transfers.
-                </p>
+            <div className="flex flex-col gap-4 md:sticky md:top-28">
+              <Reveal delay={100} direction="right">
+                <div className="overflow-hidden rounded-[1.75rem] bg-secondary p-8 text-white shadow-xl md:p-10">
+                  <p className="mb-2 font-accent text-sm font-semibold tracking-[0.16em] text-accent uppercase">
+                    Book now
+                  </p>
+                  <h3 className="mb-3 font-serif text-3xl font-bold text-white md:text-4xl">
+                    Need a car on rent today?
+                  </h3>
+                  <p className="mb-8 font-sans text-base text-white/75">
+                    Enquire now to book Sedan, Dzire, Ertiga, Scorpio, Innova Crysta, Tempo
+                    Traveller, or Bus for local and outstation travel.
+                  </p>
 
-                <div className="flex flex-col gap-3">
-                  <a
-                    href={`tel:${PHONE_TEL}`}
-                    className="inline-flex items-center justify-center gap-2 rounded-xl bg-primary px-6 py-4 font-accent text-base font-semibold text-primary-foreground hover:bg-primary-light"
-                  >
-                    <Phone size={18} />
-                    Call {PHONE_DISPLAY}
-                  </a>
-                  <a
-                    href={`${WHATSAPP_LINK}?text=${encodeURIComponent("Hello! I'm interested in car rental services in Deoghar.")}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center gap-2 rounded-xl bg-[#25D366] px-6 py-4 font-accent text-base font-semibold text-white hover:brightness-110"
-                  >
-                    <MessageCircle size={18} />
-                    WhatsApp Now
-                    <ArrowRight size={16} />
-                  </a>
+                  <div className="flex flex-col gap-3">
+                    <EnquiryButton className="inline-flex items-center justify-center gap-2 rounded-xl bg-primary px-6 py-4 font-accent text-base font-semibold text-primary-foreground hover:bg-primary-light">
+                      <Phone size={18} />
+                      Call {PHONE_DISPLAY}
+                    </EnquiryButton>
+                    <EnquiryButton className="inline-flex items-center justify-center gap-2 rounded-xl bg-[#25D366] px-6 py-4 font-accent text-base font-semibold text-white hover:brightness-110">
+                      <MessageCircle size={18} />
+                      WhatsApp Enquiry
+                      <ArrowRight size={16} />
+                    </EnquiryButton>
+                  </div>
                 </div>
-              </div>
-            </Reveal>
+              </Reveal>
+
+              {fleetBelowBook.map((vehicle, index) => (
+                <Reveal key={vehicle.name} delay={180 + index * 80} direction="right">
+                  <article className="group overflow-hidden rounded-[1.35rem] border border-primary/10 bg-card shadow-[0_10px_28px_-16px_rgba(20,110,150,0.18)] transition-all duration-500 hover:-translate-y-1 hover:border-primary/25 hover:shadow-[0_18px_40px_-18px_rgba(20,110,150,0.3)]">
+                    <div className="relative aspect-[16/10] overflow-hidden">
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
+                      <img
+                        src={vehicle.image}
+                        alt={vehicle.alt}
+                        className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-secondary/70 via-transparent to-transparent" />
+                      <span className="absolute left-3 top-3 rounded-full bg-white/90 px-2.5 py-1 font-accent text-[10px] font-semibold tracking-wide text-primary uppercase backdrop-blur-sm">
+                        {vehicle.type}
+                      </span>
+                    </div>
+                    <div className="flex items-center justify-between gap-3 p-4">
+                      <div className="min-w-0">
+                        <p className="font-accent text-base font-semibold text-foreground">
+                          {vehicle.name}
+                        </p>
+                        <p className="mt-0.5 text-sm text-muted-foreground">{vehicle.seats}</p>
+                      </div>
+                      <EnquiryButton
+                        vehicle={vehicle.name}
+                        className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary text-primary-foreground hover:bg-primary-light"
+                        aria-label={`Book ${vehicle.name}`}
+                      >
+                        <ArrowRight size={16} />
+                      </EnquiryButton>
+                    </div>
+                  </article>
+                </Reveal>
+              ))}
+            </div>
           </div>
         </div>
       </section>
