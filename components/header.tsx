@@ -25,7 +25,7 @@ export function Header({ transparent = false }: HeaderProps) {
   const navLinks = [
     { label: 'Home', href: '/' },
     { label: 'About', href: '/about' },
-    { label: 'Car Rentals', href: '/packages' },
+    { label: 'Packages', href: '/packages' },
     { label: 'Contact', href: '/contact' },
   ]
 

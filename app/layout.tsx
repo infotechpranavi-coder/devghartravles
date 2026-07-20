@@ -2,6 +2,7 @@ import { Analytics } from '@vercel/analytics/next'
 import type { Metadata, Viewport } from 'next'
 import { Fraunces, Manrope, Space_Grotesk } from 'next/font/google'
 import { MobileBottomBar } from '@/components/mobile-bottom-bar'
+import { FloatingWhatsAppButton } from '@/components/floating-whatsapp-button'
 import './globals.css'
 
 const manrope = Manrope({
@@ -69,6 +70,7 @@ export default function RootLayout({
       <body className="antialiased font-sans bg-background text-foreground pb-24 md:pb-0">
         {children}
         <MobileBottomBar />
+        <FloatingWhatsAppButton />
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>
     </html>

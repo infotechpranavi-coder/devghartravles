@@ -5,8 +5,10 @@ import { Footer } from '@/components/footer'
 import { QuoteForm } from '@/components/quote-form'
 import { PHONE_DISPLAY, PHONE_TEL, WHATSAPP_LINK } from '@/lib/contact'
 import {
+  ArrowRight,
   Bus,
   Building2,
+  Car,
   Heart,
   MessageCircle,
   Mountain,
@@ -60,22 +62,28 @@ const stats = [
 
 const services = [
   {
-    icon: Phone,
+    icon: Car,
     title: 'Car and Coach Rentals',
     description:
       'For local sightseeing or temple visits, we offer affordable car hire services in Deoghar. For timely pick ups and drop-offs from railway stations, airports, or your hotel, make a prior booking of our Local Taxi Services in Deoghar.',
+    image: '/fleet/innova.jpg',
+    alt: 'Car and coach rentals in Deoghar',
   },
   {
     icon: Bus,
     title: 'Bus Booking',
     description:
       'For reliable bus hire in Deoghar, our travel company offers secure, hassle free group travel at affordable fares and convenient schedules perfectly suitable for large family pilgrimages, weddings, and local excursions.',
+    image: '/fleet/bus.jpg',
+    alt: 'Bus booking in Deoghar',
   },
   {
     icon: Building2,
     title: 'Hotel Booking',
     description:
       'Our Deoghar travel agency organizes comfortable stays for tourists. Every one of our tour packages includes exclusive staying options at luxury hotels, resorts, and budget friendly accommodations, all matched exactly to your travel needs.',
+    image: '/fleet/scorpio.jpg',
+    alt: 'Hotel booking with Deoghar Travels',
   },
 ]
 
@@ -159,15 +167,57 @@ export default function Home() {
       </section>
 
       {/* Intro */}
-      <section className="bg-background px-4 py-16 md:py-20">
-        <div className="mx-auto max-w-3xl">
-          <p className="text-lg leading-relaxed text-muted-foreground md:text-xl">
-            Ready to escape to your dream destination? Our Deoghar Travel Agency is here to turn
-            your dream into reality. Whether you are planning a relaxing family getaway, a long
-            awaited pilgrimage, arranging group trips, or simply looking for adventure with your
-            friends, Deoghar Tour &amp; Travels offers multi-amenity facilitated car rental services
-            for all types of vacations to Deoghar.
-          </p>
+      <section className="relative overflow-hidden bg-background px-4 py-16 md:py-24">
+        <div className="pointer-events-none absolute -left-20 top-10 h-72 w-72 rounded-full bg-primary/10 blur-3xl" />
+        <div className="mx-auto grid max-w-6xl items-center gap-10 lg:grid-cols-2 lg:gap-14">
+          <div className="relative overflow-hidden rounded-[1.75rem]">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/fleet/ertiga.jpg"
+              alt="Deoghar Travel Agency car rental"
+              className="aspect-[4/3] w-full object-cover transition-transform duration-700 hover:scale-105"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-secondary/55 to-transparent" />
+            <div className="absolute bottom-5 left-5 right-5">
+              <p className="font-accent text-sm font-semibold tracking-[0.16em] text-accent uppercase">
+                Deoghar Tour &amp; Travels
+              </p>
+              <p className="mt-1 font-serif text-2xl font-bold text-white">
+                Your trip, planned with care
+              </p>
+            </div>
+          </div>
+
+          <div>
+            <p className="mb-3 font-accent text-sm font-semibold tracking-[0.18em] text-primary uppercase">
+              Welcome
+            </p>
+            <h2 className="mb-5 font-serif text-3xl font-bold leading-tight text-foreground md:text-4xl lg:text-5xl">
+              Ready to escape to your dream destination?
+            </h2>
+            <p className="mb-6 text-lg leading-relaxed text-muted-foreground">
+              Our Deoghar Travel Agency is here to turn your dream into reality. Whether you are
+              planning a relaxing family getaway, a long awaited pilgrimage, arranging group trips,
+              or simply looking for adventure with your friends, Deoghar Tour &amp; Travels offers
+              multi-amenity facilitated car rental services for all types of vacations to Deoghar.
+            </p>
+            <div className="flex flex-wrap gap-3">
+              <a
+                href={`tel:${PHONE_TEL}`}
+                className="inline-flex items-center gap-2 rounded-xl bg-primary px-5 py-3 font-accent text-sm font-semibold text-primary-foreground hover:bg-primary-light"
+              >
+                <Phone size={16} />
+                Call {PHONE_DISPLAY}
+              </a>
+              <Link
+                href="/about"
+                className="inline-flex items-center gap-2 rounded-xl border border-border bg-card px-5 py-3 font-accent text-sm font-semibold text-foreground hover:border-primary hover:text-primary"
+              >
+                More About Us
+                <ArrowRight size={16} />
+              </Link>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -214,27 +264,59 @@ export default function Home() {
       </section>
 
       {/* Services */}
-      <section className="bg-background px-4 py-16 md:py-20">
+      <section className="bg-background px-4 py-16 md:py-24">
         <div className="mx-auto max-w-6xl">
-          <h2 className="mb-3 font-serif text-4xl font-bold text-foreground md:text-5xl">
+          <p className="mb-3 font-accent text-sm font-semibold tracking-[0.18em] text-primary uppercase">
+            Our services
+          </p>
+          <h2 className="mb-4 font-serif text-4xl font-bold text-foreground md:text-5xl">
             Explore Our Travel Services
           </h2>
-          <p className="mb-10 max-w-3xl text-lg text-muted-foreground">
+          <p className="mb-12 max-w-3xl text-lg text-muted-foreground">
             Our Deoghar Tour and Travel vehicle rental services cover several places across
             Deoghar. We also take responsibility for hotel booking, pick up, and drop off to your
             desired locations.
           </p>
-          <div className="grid gap-10 md:grid-cols-3">
+
+          <div className="grid gap-5 md:grid-cols-3 md:gap-6">
             {services.map((service) => {
               const Icon = service.icon
               return (
-                <article key={service.title}>
-                  <Icon size={24} className="mb-3 text-primary" />
-                  <h3 className="mb-3 font-serif text-2xl font-bold text-foreground">
-                    {service.title}
-                  </h3>
-                  <p className="leading-relaxed text-muted-foreground">{service.description}</p>
-                </article>
+                <a
+                  key={service.title}
+                  href={`${WHATSAPP_LINK}?text=${encodeURIComponent(`Hello! I want to enquire about ${service.title}.`)}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group relative block h-[420px] overflow-hidden rounded-[1.75rem] sm:h-[460px]"
+                >
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={service.image}
+                    alt={service.alt}
+                    className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-secondary via-secondary/55 to-secondary/10" />
+
+                  <div className="absolute inset-x-0 bottom-0 flex items-end justify-between gap-4 p-6 md:p-7">
+                    <div className="min-w-0 flex-1">
+                      <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-full bg-white/15 text-white backdrop-blur-sm">
+                        <Icon size={18} />
+                      </div>
+                      <h3 className="mb-2 font-serif text-2xl font-bold leading-tight text-white md:text-3xl">
+                        {service.title}
+                      </h3>
+                      <p className="mb-4 line-clamp-3 text-sm leading-relaxed text-white/85 md:text-base">
+                        {service.description}
+                      </p>
+                      <p className="font-accent text-xs font-semibold tracking-[0.16em] text-accent uppercase">
+                        Enquire Now
+                      </p>
+                    </div>
+                    <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-accent text-accent-foreground transition-transform duration-300 group-hover:scale-110">
+                      <ArrowRight size={20} />
+                    </span>
+                  </div>
+                </a>
               )
             })}
           </div>
@@ -306,36 +388,36 @@ export default function Home() {
       </section>
 
       {/* Quote */}
-      <section id="quote" className="scroll-mt-24 bg-secondary px-4 py-16 md:py-20">
-        <div className="mx-auto grid max-w-6xl gap-10 lg:grid-cols-2 lg:items-start">
+      <section id="quote" className="scroll-mt-24 bg-secondary px-4 py-12 md:py-14">
+        <div className="mx-auto grid max-w-5xl gap-8 lg:grid-cols-[1fr_0.95fr] lg:items-center">
           <div>
-            <h2 className="mb-4 font-serif text-4xl font-bold text-white md:text-5xl">
+            <h2 className="mb-3 font-serif text-3xl font-bold text-white md:text-4xl">
               Fill Out the Quote
             </h2>
-            <p className="mb-6 text-lg text-white/80">
+            <p className="mb-5 text-base text-white/80">
               Ready to Book Our Vehicle for Your Next Deoghar Trip? Call or WhatsApp Now{' '}
               {PHONE_DISPLAY}.
             </p>
-            <div className="flex flex-wrap gap-3">
+            <div className="flex flex-wrap gap-2.5">
               <a
                 href={`tel:${PHONE_TEL}`}
-                className="inline-flex items-center gap-2 rounded-xl bg-primary px-6 py-3.5 font-accent text-base font-semibold text-primary-foreground hover:bg-primary-light"
+                className="inline-flex items-center gap-2 rounded-lg bg-primary px-4 py-2.5 font-accent text-sm font-semibold text-primary-foreground hover:bg-primary-light"
               >
-                <Phone size={18} />
+                <Phone size={16} />
                 Call {PHONE_DISPLAY}
               </a>
               <a
                 href={`${WHATSAPP_LINK}?text=${encodeURIComponent('Hello! I want a quote for my Deoghar trip.')}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-xl bg-accent px-6 py-3.5 font-accent text-base font-semibold text-accent-foreground hover:brightness-110"
+                className="inline-flex items-center gap-2 rounded-lg bg-accent px-4 py-2.5 font-accent text-sm font-semibold text-accent-foreground hover:brightness-110"
               >
-                <MessageCircle size={18} />
+                <MessageCircle size={16} />
                 WhatsApp
               </a>
             </div>
           </div>
-          <div className="rounded-2xl bg-card p-6 sm:p-8">
+          <div className="rounded-xl bg-card p-4 sm:p-5">
             <QuoteForm />
           </div>
         </div>

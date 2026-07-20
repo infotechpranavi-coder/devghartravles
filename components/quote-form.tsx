@@ -43,52 +43,54 @@ Message: ${formData.message}`
   }
 
   const inputClass =
-    'w-full rounded-xl border border-border bg-background px-4 py-3.5 font-sans text-base text-foreground outline-none focus:border-primary focus:ring-2 focus:ring-primary/20'
+    'w-full rounded-lg border border-border bg-background px-3 py-2.5 font-sans text-sm text-foreground outline-none focus:border-primary focus:ring-1 focus:ring-primary/20'
 
   if (submitted) {
     return (
-      <div className="py-10 text-center">
-        <CheckCircle size={32} className="mx-auto mb-3 text-brand-green" />
-        <h3 className="mb-2 font-serif text-2xl font-bold text-foreground">Quote ready</h3>
-        <p className="text-muted-foreground">WhatsApp should open — send the message to reach us.</p>
+      <div className="py-6 text-center">
+        <CheckCircle size={24} className="mx-auto mb-2 text-brand-green" />
+        <h3 className="mb-1 font-serif text-lg font-bold text-foreground">Quote ready</h3>
+        <p className="text-sm text-muted-foreground">WhatsApp should open — send the message to reach us.</p>
       </div>
     )
   }
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-4">
-      <div>
-        <label htmlFor="quote-name" className="mb-2 block font-accent text-sm font-semibold text-foreground">
-          Name *
-        </label>
-        <input
-          id="quote-name"
-          type="text"
-          name="name"
-          required
-          value={formData.name}
-          onChange={handleChange}
-          placeholder="Your name"
-          className={inputClass}
-        />
+    <form onSubmit={handleSubmit} className="space-y-3">
+      <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
+        <div>
+          <label htmlFor="quote-name" className="mb-1 block font-accent text-xs font-semibold text-foreground">
+            Name *
+          </label>
+          <input
+            id="quote-name"
+            type="text"
+            name="name"
+            required
+            value={formData.name}
+            onChange={handleChange}
+            placeholder="Your name"
+            className={inputClass}
+          />
+        </div>
+        <div>
+          <label htmlFor="quote-phone" className="mb-1 block font-accent text-xs font-semibold text-foreground">
+            Phone *
+          </label>
+          <input
+            id="quote-phone"
+            type="tel"
+            name="phone"
+            required
+            value={formData.phone}
+            onChange={handleChange}
+            placeholder="10-digit mobile number"
+            className={inputClass}
+          />
+        </div>
       </div>
       <div>
-        <label htmlFor="quote-phone" className="mb-2 block font-accent text-sm font-semibold text-foreground">
-          Phone *
-        </label>
-        <input
-          id="quote-phone"
-          type="tel"
-          name="phone"
-          required
-          value={formData.phone}
-          onChange={handleChange}
-          placeholder="10-digit mobile number"
-          className={inputClass}
-        />
-      </div>
-      <div>
-        <label htmlFor="quote-vehicle" className="mb-2 block font-accent text-sm font-semibold text-foreground">
+        <label htmlFor="quote-vehicle" className="mb-1 block font-accent text-xs font-semibold text-foreground">
           Vehicle *
         </label>
         <select
@@ -111,14 +113,14 @@ Message: ${formData.message}`
         </select>
       </div>
       <div>
-        <label htmlFor="quote-message" className="mb-2 block font-accent text-sm font-semibold text-foreground">
+        <label htmlFor="quote-message" className="mb-1 block font-accent text-xs font-semibold text-foreground">
           Trip details *
         </label>
         <textarea
           id="quote-message"
           name="message"
           required
-          rows={4}
+          rows={2}
           value={formData.message}
           onChange={handleChange}
           placeholder="Travel date, pickup location, destination..."
@@ -127,9 +129,9 @@ Message: ${formData.message}`
       </div>
       <button
         type="submit"
-        className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-primary px-6 py-3.5 font-accent text-base font-semibold text-primary-foreground hover:bg-primary-light sm:w-auto"
+        className="inline-flex w-full items-center justify-center gap-2 rounded-lg bg-primary px-4 py-2.5 font-accent text-sm font-semibold text-primary-foreground hover:bg-primary-light sm:w-auto"
       >
-        <Send size={18} />
+        <Send size={15} />
         Get Quote on WhatsApp
       </button>
     </form>
