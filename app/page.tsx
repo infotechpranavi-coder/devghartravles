@@ -96,14 +96,14 @@ export default function Home() {
       <Header transparent />
 
       {/* Hero */}
-      <section className="relative flex min-h-[100svh] items-end overflow-hidden">
+      <section className="relative flex min-h-svh items-end overflow-hidden">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src="/fleet/innova.jpg"
           alt="Deoghar travel agency taxi and car rental"
           className="absolute inset-0 h-full w-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-secondary via-secondary/65 to-secondary/35" />
+        <div className="absolute inset-0 bg-linear-to-t from-secondary via-secondary/65 to-secondary/35" />
 
         <div className="relative z-10 mx-auto w-full max-w-6xl px-4 pb-16 pt-28 sm:px-6 md:pb-24">
           <p className="mb-3 font-accent text-sm font-semibold tracking-[0.18em] text-accent uppercase animate-fade-in">
@@ -145,9 +145,9 @@ export default function Home() {
             <img
               src="/fleet/ertiga.jpg"
               alt="Deoghar Travel Agency car rental"
-              className="aspect-[4/3] w-full object-cover transition-transform duration-700 hover:scale-105"
+              className="aspect-4/3 w-full object-cover transition-transform duration-700 hover:scale-105"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-secondary/55 to-transparent" />
+            <div className="absolute inset-0 bg-linear-to-t from-secondary/55 to-transparent" />
             <div className="absolute bottom-5 left-5 right-5">
               <p className="font-accent text-sm font-semibold tracking-[0.16em] text-accent uppercase">
                 Deoghar Tour &amp; Travels
@@ -263,7 +263,7 @@ export default function Home() {
                     alt={service.alt}
                     className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-110"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-secondary via-secondary/55 to-secondary/10" />
+                  <div className="absolute inset-0 bg-linear-to-t from-secondary via-secondary/55 to-secondary/10" />
 
                   <div className="absolute inset-x-0 bottom-0 flex items-end justify-between gap-4 p-6 md:p-7">
                     <div className="min-w-0 flex-1">
@@ -334,7 +334,7 @@ export default function Home() {
                 <img
                   src={vehicle.image}
                   alt={vehicle.name}
-                  className="aspect-[4/3] w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  className="aspect-4/3 w-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
                 <div className="p-3 sm:p-4">
                   <p className="font-accent text-sm font-semibold text-foreground sm:text-base">

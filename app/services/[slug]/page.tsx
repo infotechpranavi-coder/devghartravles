@@ -50,7 +50,7 @@ export default async function ServiceDetailPage({ params }: PageProps) {
           alt={service.alt}
           className="absolute inset-0 h-full w-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-secondary via-secondary/55 to-secondary/20" />
+        <div className="absolute inset-0 bg-linear-to-t from-secondary via-secondary/55 to-secondary/20" />
         <div className="relative z-10 mx-auto w-full max-w-6xl px-4 pb-14 pt-28 sm:px-6">
           <Link
             href="/#services"
@@ -86,7 +86,7 @@ export default async function ServiceDetailPage({ params }: PageProps) {
             </ul>
           </div>
 
-          <aside className="h-fit rounded-[1.5rem] bg-secondary p-7 text-white md:sticky md:top-28">
+          <aside className="h-fit rounded-3xl bg-secondary p-7 text-white md:sticky md:top-28">
             <p className="mb-2 font-accent text-xs font-semibold tracking-[0.16em] text-accent uppercase">
               Enquire now
             </p>
@@ -131,7 +131,7 @@ export default async function ServiceDetailPage({ params }: PageProps) {
                   <img
                     src={item.image}
                     alt={item.alt}
-                    className="aspect-[16/9] w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    className="aspect-video w-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                   <div className="p-5">
                     <p className="font-serif text-xl font-bold text-foreground">{item.title}</p>
