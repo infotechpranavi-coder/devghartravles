@@ -1,17 +1,8 @@
 'use client'
 
 import { useState } from 'react'
-import {
-  ArrowRight,
-  CheckCircle,
-  Clock,
-  Mail,
-  MapPin,
-  MessageCircle,
-  Phone,
-  Send,
-} from 'lucide-react'
-import { PHONE_DISPLAY, PHONE_TEL, WHATSAPP_LINK } from '@/lib/contact'
+import { CheckCircle, Send } from 'lucide-react'
+import { WHATSAPP_LINK } from '@/lib/contact'
 
 export function ContactForm() {
   const [formData, setFormData] = useState({
@@ -59,12 +50,12 @@ Message: ${formData.message}`
 
   if (submitted) {
     return (
-      <div className="flex flex-col items-center justify-center rounded-[1.75rem] bg-brand-wash px-6 py-16 text-center">
-        <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-brand-green/15 text-brand-green">
-          <CheckCircle size={32} />
+      <div className="flex flex-col items-center justify-center rounded-2xl bg-muted/60 px-6 py-14 text-center">
+        <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-brand-green/15 text-brand-green">
+          <CheckCircle size={28} />
         </div>
-        <h3 className="mb-2 font-serif text-3xl font-bold text-foreground">Message ready</h3>
-        <p className="max-w-sm font-sans text-base text-muted-foreground">
+        <h3 className="mb-2 font-serif text-2xl font-bold text-foreground">Message ready</h3>
+        <p className="max-w-sm text-muted-foreground">
           WhatsApp should open with your details. Send the message and we&apos;ll get back to you
           shortly.
         </p>
@@ -77,7 +68,7 @@ Message: ${formData.message}`
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
         <div>
           <label htmlFor="name" className="mb-2 block font-accent text-sm font-semibold text-foreground">
-            Full Name *
+            Name *
           </label>
           <input
             id="name"
@@ -156,18 +147,17 @@ Message: ${formData.message}`
           rows={5}
           value={formData.message}
           onChange={handleChange}
-          placeholder="Tell us your travel dates, vehicle type, group size, and pickup location..."
+          placeholder="Travel date, vehicle type, group size, and pickup location..."
           className={`${inputClass} resize-none`}
         />
       </div>
 
       <button
         type="submit"
-        className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-primary px-6 py-4 font-accent text-base font-semibold text-primary-foreground hover:bg-primary-light sm:w-auto"
+        className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-primary px-6 py-4 font-accent text-base font-semibold text-primary-foreground transition-colors hover:bg-primary-light sm:w-auto"
       >
         <Send size={18} />
         Send via WhatsApp
-        <ArrowRight size={16} />
       </button>
     </form>
   )
