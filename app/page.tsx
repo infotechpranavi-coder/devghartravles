@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { Header } from '@/components/header'
 import { Footer } from '@/components/footer'
 import { QuoteForm } from '@/components/quote-form'
+import { fleetVehicles, travelServices } from '@/lib/catalog'
 import { PHONE_DISPLAY, PHONE_TEL, WHATSAPP_LINK } from '@/lib/contact'
 import {
   ArrowRight,
@@ -25,6 +26,12 @@ export const metadata: Metadata = {
     'Looking for a reliable Deoghar travel agency? Book affordable car rentals for local sightseeing, airport or railway transfers, and trips. Call us at 9835875097.',
   keywords:
     'Deoghar Travel Agency, Taxi & Car Rental Service in Deoghar, Deoghar Tour and Travels, car hire Deoghar, taxi service Deoghar',
+}
+
+const serviceIcons = {
+  car: Car,
+  bus: Bus,
+  hotel: Building2,
 }
 
 const vibes = [
@@ -60,33 +67,6 @@ const stats = [
   { value: '250+', label: 'Satisfied customers' },
 ]
 
-const services = [
-  {
-    icon: Car,
-    title: 'Car and Coach Rentals',
-    description:
-      'For local sightseeing or temple visits, we offer affordable car hire services in Deoghar. For timely pick ups and drop-offs from railway stations, airports, or your hotel, make a prior booking of our Local Taxi Services in Deoghar.',
-    image: '/fleet/innova.jpg',
-    alt: 'Car and coach rentals in Deoghar',
-  },
-  {
-    icon: Bus,
-    title: 'Bus Booking',
-    description:
-      'For reliable bus hire in Deoghar, our travel company offers secure, hassle free group travel at affordable fares and convenient schedules perfectly suitable for large family pilgrimages, weddings, and local excursions.',
-    image: '/fleet/bus.jpg',
-    alt: 'Bus booking in Deoghar',
-  },
-  {
-    icon: Building2,
-    title: 'Hotel Booking',
-    description:
-      'Our Deoghar travel agency organizes comfortable stays for tourists. Every one of our tour packages includes exclusive staying options at luxury hotels, resorts, and budget friendly accommodations, all matched exactly to your travel needs.',
-    image: '/fleet/scorpio.jpg',
-    alt: 'Hotel booking with Deoghar Travels',
-  },
-]
-
 const trustPoints = [
   {
     title: 'Wedding Car Rentals',
@@ -108,16 +88,6 @@ const trustPoints = [
     description:
       'Now you can smoothly streamline your business travel and executive transport with a service that you can rely on. Our Deoghar travel agency offers seamless corporate logistics, ensuring that your team and clients experience efficient, professional, and timely transportation.',
   },
-]
-
-const fleet = [
-  { name: 'Sedan Car on Rent', image: '/fleet/sedan.jpg' },
-  { name: 'Dzire Car on Rent', image: '/fleet/dzire.jpg' },
-  { name: 'Ertiga Car on Rent', image: '/fleet/ertiga.jpg' },
-  { name: 'Scorpio Car on Rent', image: '/fleet/scorpio.jpg' },
-  { name: 'Crysta Innova Car on Rent', image: '/fleet/innova.jpg' },
-  { name: 'Tempo Traveller Rent', image: '/fleet/tempo.jpg' },
-  { name: 'Bus On Rent', image: '/fleet/bus.jpg' },
 ]
 
 export default function Home() {
@@ -264,7 +234,7 @@ export default function Home() {
       </section>
 
       {/* Services */}
-      <section className="bg-background px-4 py-16 md:py-24">
+      <section id="services" className="scroll-mt-24 bg-background px-4 py-16 md:py-24">
         <div className="mx-auto max-w-6xl">
           <p className="mb-3 font-accent text-sm font-semibold tracking-[0.18em] text-primary uppercase">
             Our services
@@ -279,14 +249,12 @@ export default function Home() {
           </p>
 
           <div className="grid gap-5 md:grid-cols-3 md:gap-6">
-            {services.map((service) => {
-              const Icon = service.icon
+            {travelServices.map((service) => {
+              const Icon = serviceIcons[service.icon]
               return (
-                <a
-                  key={service.title}
-                  href={`${WHATSAPP_LINK}?text=${encodeURIComponent(`Hello! I want to enquire about ${service.title}.`)}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <Link
+                  key={service.slug}
+                  href={`/services/${service.slug}`}
                   className="group relative block h-[420px] overflow-hidden rounded-[1.75rem] sm:h-[460px]"
                 >
                   {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -309,14 +277,14 @@ export default function Home() {
                         {service.description}
                       </p>
                       <p className="font-accent text-xs font-semibold tracking-[0.16em] text-accent uppercase">
-                        Enquire Now
+                        View Details
                       </p>
                     </div>
                     <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-accent text-accent-foreground transition-transform duration-300 group-hover:scale-110">
                       <ArrowRight size={20} />
                     </span>
                   </div>
-                </a>
+                </Link>
               )
             })}
           </div>
@@ -346,22 +314,20 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Fleet */}
+      {/* Fleet — vehicle cards open /fleet/[slug] detail pages */}
       <section id="fleet" className="scroll-mt-24 bg-background px-4 py-16 md:py-20">
         <div className="mx-auto max-w-6xl">
           <h2 className="mb-3 font-serif text-4xl font-bold text-foreground md:text-5xl">
             Our affordable car rental services in Deoghar for local sightseeing.
           </h2>
           <p className="mb-10 max-w-2xl text-lg text-muted-foreground">
-            Choose the vehicle that fits your trip — tap to enquire on WhatsApp.
+            Choose the vehicle that fits your trip — tap to view details and book.
           </p>
           <div className="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4 md:gap-5">
-            {fleet.map((vehicle) => (
-              <a
-                key={vehicle.name}
-                href={`${WHATSAPP_LINK}?text=${encodeURIComponent(`Hello! I want to book ${vehicle.name} with Deoghar Travel Agency.`)}`}
-                target="_blank"
-                rel="noopener noreferrer"
+            {fleetVehicles.map((vehicle) => (
+              <Link
+                key={vehicle.slug}
+                href={`/fleet/${vehicle.slug}`}
                 className="group block overflow-hidden rounded-2xl bg-card transition-transform duration-300 hover:-translate-y-0.5"
               >
                 {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -374,8 +340,9 @@ export default function Home() {
                   <p className="font-accent text-sm font-semibold text-foreground sm:text-base">
                     {vehicle.name}
                   </p>
+                  <p className="mt-1 text-xs text-primary sm:text-sm">View details →</p>
                 </div>
-              </a>
+              </Link>
             ))}
           </div>
           <Link
