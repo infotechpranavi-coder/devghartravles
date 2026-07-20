@@ -37,37 +37,6 @@ const serviceIcons = {
   hotel: Building2,
 }
 
-const vibes = [
-  {
-    title: 'Family',
-    image:
-      'https://images.unsplash.com/photo-1609220136736-443140cffec6?auto=format&fit=crop&w=400&q=80',
-    description:
-      'At our Deoghar travel agency, we offer car, bus, and tempo traveler rental services to cover temple visits, nature parks, and local sightseeing. There’s a kind of charisma in this place that pulls in people of all ages.',
-  },
-  {
-    title: 'Pilgrimage',
-    image:
-      'https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=400&q=80',
-    description:
-      'Want a soul enriching spiritual journey? Deoghar opens up an exquisite window to multiple pilgrimage destinations, such as Baba Baidyanath Dham Temple and Parasnath Temple.',
-  },
-  {
-    title: 'Adventure',
-    image:
-      'https://images.unsplash.com/photo-1551632811-561732d1e306?auto=format&fit=crop&w=400&q=80',
-    description:
-      'Beyond temples, Deoghar keeps it interesting with scenic trekking trails, calm nature walks, peaceful hills, and waterfalls, so you get the adventure you are after.',
-  },
-  {
-    title: 'Group Travels',
-    image:
-      'https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=400&q=80',
-    description:
-      'Travel with ease with our travel agents in Deoghar for your community tours, corporate outings, or institutional excursions. We offer reliable travel arrangements for a safe and hassle free journey.',
-  },
-]
-
 const stats = [
   {
     value: '100+',
@@ -202,38 +171,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Travel vibes */}
-      <section className="bg-[#F5F7F8] px-4 py-16 md:py-20">
-        <div className="mx-auto max-w-6xl">
-          <h2 className="mb-12 text-center font-serif text-4xl font-bold text-foreground md:text-5xl">
-            Pick Your Travel Vibe
-          </h2>
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {vibes.map((vibe) => (
-              <article
-                key={vibe.title}
-                className="flex h-full flex-col items-center rounded-xl border border-border bg-card px-5 py-8 text-center shadow-[0_8px_24px_-12px_rgba(20,40,60,0.2)]"
-              >
-                <div className="mb-5 h-28 w-28 overflow-hidden rounded-full border-4 border-muted shadow-sm">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
-                    src={vibe.image}
-                    alt={vibe.title}
-                    className="h-full w-full object-cover"
-                  />
-                </div>
-                <h3 className="mb-3 font-serif text-xl font-bold text-primary md:text-2xl">
-                  {vibe.title}
-                </h3>
-                <p className="line-clamp-4 text-sm leading-relaxed text-muted-foreground">
-                  {vibe.description}
-                </p>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Stats */}
       <section className="bg-card px-4 py-14 md:py-16">
         <div className="mx-auto grid max-w-6xl grid-cols-2 gap-8 text-center md:grid-cols-4 md:gap-6">
@@ -308,53 +245,6 @@ export default function Home() {
                 </Link>
               )
             })}
-          </div>
-        </div>
-      </section>
-
-      {/* Intro / Welcome */}
-      <section className="relative overflow-hidden px-4 py-16 md:py-20">
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          src="/fleet/scorpio.jpg"
-          alt=""
-          className="absolute inset-0 h-full w-full object-cover"
-          aria-hidden
-        />
-        <div className="absolute inset-0 bg-secondary/75" />
-        <div className="absolute inset-0 bg-linear-to-r from-secondary/90 via-secondary/55 to-secondary/25" />
-
-        <div className="relative z-10 mx-auto max-w-6xl">
-          <div className="max-w-3xl">
-            <p className="mb-3 flex items-center gap-3 font-accent text-xs font-semibold tracking-[0.22em] text-white uppercase">
-              Welcome
-              <span className="h-px w-10 bg-accent" />
-            </p>
-            <h2 className="mb-4 font-serif text-3xl font-bold leading-tight text-white text-balance md:text-4xl lg:text-5xl">
-              Ready to escape to your dream destination?
-            </h2>
-            <p className="mb-6 text-base leading-relaxed text-white/85 md:text-lg">
-              Our Deoghar Travel Agency is here to turn your dream into reality. Whether you are
-              planning a relaxing family getaway, a long awaited pilgrimage, arranging group trips,
-              or simply looking for adventure with your friends, Deoghar Tour &amp; Travels offers
-              multi-amenity facilitated car rental services for all types of vacations to Deoghar.
-            </p>
-            <div className="flex flex-wrap gap-3">
-              <a
-                href={`tel:${PHONE_TEL}`}
-                className="inline-flex items-center gap-2 rounded-xl bg-primary px-5 py-3 font-accent text-sm font-semibold text-primary-foreground hover:bg-primary-light"
-              >
-                <Phone size={16} />
-                Call {PHONE_DISPLAY}
-              </a>
-              <Link
-                href="/about"
-                className="inline-flex items-center gap-2 rounded-xl border border-white/40 bg-white/10 px-5 py-3 font-accent text-sm font-semibold text-white backdrop-blur-sm hover:bg-white/20"
-              >
-                More About Us
-                <ArrowRight size={16} />
-              </Link>
-            </div>
           </div>
         </div>
       </section>
