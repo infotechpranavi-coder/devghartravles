@@ -71,7 +71,9 @@ export function Footer() {
           {/* Brand */}
           <div className="lg:col-span-1">
             <div className="mb-4 flex items-center gap-3">
-              <BrandLogo size={48} showText={false} />
+              <div className="flex shrink-0 items-center justify-center rounded-full bg-white p-1.5 shadow-sm">
+                <BrandLogo size={48} showText={false} />
+              </div>
               <div>
                 <p className="font-serif text-xl font-bold text-white">Deoghar Travels</p>
                 <p className="font-accent text-xs font-medium tracking-[0.16em] text-accent uppercase">

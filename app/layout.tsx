@@ -66,8 +66,15 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className={`${manrope.variable} ${fraunces.variable} ${spaceGrotesk.variable}`}>
-      <body className="antialiased font-sans bg-background text-foreground pb-24 md:pb-0">
+    <html
+      lang="en"
+      suppressHydrationWarning
+      className={`${manrope.variable} ${fraunces.variable} ${spaceGrotesk.variable}`}
+    >
+      <body
+        suppressHydrationWarning
+        className="antialiased font-sans bg-background text-foreground pb-24 md:pb-0"
+      >
         {children}
         <MobileBottomBar />
         <FloatingWhatsAppButton />

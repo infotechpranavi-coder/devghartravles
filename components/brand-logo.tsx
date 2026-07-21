@@ -20,8 +20,8 @@ export function BrandLogo({
         alt="Deoghar Car Rental"
         width={size}
         height={size}
-        className="h-auto w-auto object-contain"
-        style={{ width: size, height: size }}
+        className="object-contain"
+        style={{ width: size, height: 'auto' }}
         priority
       />
       {showText && (

@@ -8,9 +8,12 @@
   --font-serif: var(--font-serif);
   --font-accent: var(--font-accent);
   --color-primary: #146E96;
+  --color-primary-foreground: #FFFFFF;
   --color-primary-light: #2A8BB5;
   --color-secondary: #14283C;
+  --color-secondary-foreground: #FFFFFF;
   --color-accent: #F0A050;
+  --color-accent-foreground: #1A2030;
   --color-brand-green: #5A8C50;
   --color-background: #F3F8F6;
   --color-foreground: #14233A;

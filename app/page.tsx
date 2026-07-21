@@ -77,17 +77,16 @@ export default function Home() {
           alt="Baba Baidyanath Jyotirlinga Temple, Deoghar"
           className="absolute inset-0 h-full w-full object-cover object-[center_30%]"
         />
+        <div className="absolute inset-0 bg-linear-to-r from-secondary/80 via-secondary/35 to-transparent" />
+        <div className="absolute inset-0 bg-linear-to-t from-secondary/55 via-transparent to-transparent" />
 
         <div className="relative z-10 mx-auto w-full max-w-6xl px-4 pb-10 pt-24 sm:px-6 md:pb-14">
-          <p className="mb-2 font-accent text-sm font-semibold tracking-[0.18em] text-accent uppercase animate-fade-in [text-shadow:0_1px_8px_rgba(0,0,0,0.55)]">
+          <p className="mb-4 inline-flex animate-fade-in items-center rounded-lg bg-accent px-3.5 py-1.5 font-accent text-xs font-semibold tracking-[0.18em] text-accent-foreground uppercase shadow-sm sm:text-sm">
             Deoghar Travel Agency
           </p>
-          <h1 className="mb-3 max-w-4xl font-serif text-3xl font-bold leading-[1.08] text-white text-balance sm:text-4xl md:text-5xl lg:text-6xl animate-fade-in-up [text-shadow:0_2px_14px_rgba(0,0,0,0.55)]">
-            Call and Book Your Dream Trip Now
+          <h1 className="mb-6 max-w-4xl animate-fade-in-up font-serif text-3xl font-bold leading-[1.08] text-white text-balance sm:text-4xl md:text-5xl lg:text-6xl [text-shadow:0_2px_8px_rgba(0,0,0,0.65),0_4px_24px_rgba(0,0,0,0.45)]">
+            Call and Book Your <span className="text-accent">Dream Trip</span> Now
           </h1>
-          <p className="mb-6 max-w-xl font-sans text-base text-white md:text-lg animate-fade-in-up [text-shadow:0_1px_10px_rgba(0,0,0,0.55)]">
-            Taxi &amp; car rental service in Deoghar for sightseeing, transfers, and tours.
-          </p>
           <div className="flex flex-wrap gap-3 animate-fade-in-up">
             <a
               href={`tel:${PHONE_TEL}`}
@@ -113,7 +112,7 @@ export default function Home() {
       <section id="fleet" className="scroll-mt-24 bg-muted/40 px-4 py-16 md:py-24">
         <div className="mx-auto max-w-6xl">
           <div className="mb-10 text-center">
-            <p className="mb-2 font-accent text-sm font-semibold tracking-[0.2em] text-accent uppercase">
+            <p className="mb-3 inline-flex items-center rounded-lg bg-accent px-3.5 py-1.5 font-accent text-xs font-semibold tracking-[0.2em] text-accent-foreground uppercase shadow-sm sm:text-sm">
               Deoghar Travels
             </p>
             <h2 className="mb-4 font-serif text-4xl font-bold text-primary md:text-5xl">
@@ -146,7 +145,7 @@ export default function Home() {
       <section className="bg-background px-4 py-16 md:py-24">
         <div className="mx-auto max-w-6xl">
           <div className="mb-12 text-center">
-            <p className="mb-3 font-accent text-sm font-semibold tracking-[0.18em] text-accent uppercase">
+            <p className="mb-3 inline-flex items-center rounded-lg bg-accent px-3.5 py-1.5 font-accent text-xs font-semibold tracking-[0.18em] text-accent-foreground uppercase shadow-sm sm:text-sm">
               Tour packages
             </p>
             <h2 className="mb-4 font-serif text-4xl font-bold text-foreground md:text-5xl">

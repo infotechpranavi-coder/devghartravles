@@ -175,7 +175,9 @@ export default function About() {
           <div className="grid gap-8 md:grid-cols-2">
             <div className="rounded-[1.5rem] bg-secondary p-8 text-white md:p-10">
               <Route size={28} className="mb-4 text-accent" />
-              <h3 className="mb-3 font-serif text-2xl font-bold">Pickup &amp; drop across Jharkhand</h3>
+              <h3 className="mb-3 font-serif text-2xl font-bold text-white">
+                Pickup &amp; drop across Jharkhand
+              </h3>
               <p className="leading-relaxed text-white/75">
                 As a reliable Car Rental Company in Deoghar, we offer pickup and drop services in
                 several places across Jharkhand. For local sightseeing or trips, you can even book
@@ -186,7 +188,7 @@ export default function About() {
               <p className="mb-2 font-accent text-sm font-semibold tracking-[0.16em] uppercase text-white/80">
                 Popular route
               </p>
-              <h3 className="mb-3 font-serif text-3xl font-bold">Sultanganj to Deoghar</h3>
+              <h3 className="mb-3 font-serif text-3xl font-bold text-white">Sultanganj to Deoghar</h3>
               <p className="mb-6 leading-relaxed text-white/85">
                 Book car and bus on rent for this pilgrimage corridor — clean vehicles, on-time
                 drivers, fair rates.

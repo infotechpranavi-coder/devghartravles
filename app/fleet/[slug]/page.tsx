@@ -44,15 +44,17 @@ export default async function FleetDetailPage({ params }: PageProps) {
           className="absolute inset-0 h-full w-full object-cover"
         />
         <div className="absolute inset-0 bg-linear-to-t from-secondary via-secondary/55 to-secondary/20" />
+
+        <Link
+          href="/#fleet"
+          className="absolute top-24 left-4 z-20 inline-flex items-center gap-2 rounded-lg bg-black/35 px-3 py-2 font-accent text-sm font-semibold text-white backdrop-blur-sm hover:bg-black/50 sm:left-6 md:top-28"
+        >
+          <ArrowLeft size={16} />
+          Back to fleet
+        </Link>
+
         <div className="relative z-10 mx-auto w-full max-w-6xl px-4 pb-14 pt-28 sm:px-6">
-          <Link
-            href="/#fleet"
-            className="mb-5 inline-flex items-center gap-2 font-accent text-sm font-semibold text-white/80 hover:text-white"
-          >
-            <ArrowLeft size={16} />
-            Back to fleet
-          </Link>
-          <p className="mb-3 font-accent text-sm font-semibold tracking-[0.18em] text-accent uppercase">
+          <p className="mb-4 inline-flex items-center rounded-lg bg-accent px-3.5 py-1.5 font-accent text-xs font-semibold tracking-[0.18em] text-accent-foreground uppercase shadow-sm sm:text-sm">
             {vehicle.type} · {vehicle.seats}
           </p>
           <h1 className="max-w-3xl font-serif text-4xl font-bold text-white text-balance md:text-6xl">
