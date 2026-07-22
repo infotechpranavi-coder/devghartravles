@@ -144,7 +144,8 @@ export const travelServices: TravelService[] = [
   {
     slug: 'hotel-booking',
     title: 'Hotel Booking',
-    image: '/fleet/scorpio.jpg',
+    image:
+      'https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80',
     alt: 'Hotel booking with Deoghar Travels',
     summary: 'Comfortable stays from budget hotels to luxury resorts matched to your trip.',
     description:

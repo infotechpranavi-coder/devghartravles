@@ -50,7 +50,7 @@ export function Footer() {
           <div className="flex flex-wrap gap-2.5">
             <a
               href={`tel:${PHONE_TEL}`}
-              className="inline-flex items-center gap-2 rounded-xl bg-primary px-5 py-3 font-accent text-sm font-semibold text-primary-foreground hover:bg-primary-light"
+              className="inline-flex items-center gap-2 rounded-xl bg-primary px-5 py-3 font-accent text-sm font-semibold text-white hover:bg-primary-light"
             >
               <Phone size={16} />
               Call {PHONE_DISPLAY}
@@ -81,7 +81,7 @@ export function Footer() {
                 </p>
               </div>
             </div>
-            <p className="mb-5 text-sm leading-relaxed text-white/65">
+            <p className="mb-5 text-sm leading-relaxed text-white">
               Trusted Deoghar travel agency for taxi, car rental, transfers, and tours across
               Jharkhand.
             </p>
@@ -106,7 +106,7 @@ export function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="group inline-flex items-center gap-2 text-sm text-white/70 transition-colors hover:text-white"
+                    className="group inline-flex items-center gap-2 text-sm text-white transition-colors hover:text-accent"
                   >
                     <span className="h-1 w-1 rounded-full bg-accent transition-transform group-hover:scale-125" />
                     {link.label}
@@ -123,7 +123,7 @@ export function Footer() {
             </p>
             <ul className="space-y-2.5">
               {services.map((service) => (
-                <li key={service} className="flex items-center gap-2 text-sm text-white/70">
+                <li key={service} className="flex items-center gap-2 text-sm text-white">
                   <span className="h-1 w-1 rounded-full bg-primary-light" />
                   {service}
                 </li>
@@ -140,13 +140,13 @@ export function Footer() {
               <li>
                 <a
                   href={`tel:${PHONE_TEL}`}
-                  className="flex items-start gap-3 text-white/75 transition-colors hover:text-white"
+                  className="flex items-start gap-3 text-white transition-colors hover:text-accent"
                 >
                   <span className="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-white/10 text-accent">
                     <Phone size={14} />
                   </span>
                   <span>
-                    <span className="block text-xs text-white/45">Phone</span>
+                    <span className="block text-xs text-white/80">Phone</span>
                     +91 {PHONE_DISPLAY}
                   </span>
                 </a>
@@ -154,13 +154,13 @@ export function Footer() {
               <li>
                 <a
                   href={EMAIL_MAILTO}
-                  className="flex items-start gap-3 text-white/75 transition-colors hover:text-white"
+                  className="flex items-start gap-3 text-white transition-colors hover:text-accent"
                 >
                   <span className="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-white/10 text-accent">
                     <Mail size={14} />
                   </span>
                   <span>
-                    <span className="block text-xs text-white/45">Email</span>
+                    <span className="block text-xs text-white/80">Email</span>
                     <span className="break-all">{EMAIL}</span>
                   </span>
                 </a>
@@ -170,13 +170,13 @@ export function Footer() {
                   href={MAPS_LINK}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-start gap-3 text-white/75 transition-colors hover:text-white"
+                  className="flex items-start gap-3 text-white transition-colors hover:text-accent"
                 >
                   <span className="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-white/10 text-accent">
                     <MapPin size={14} />
                   </span>
                   <span>
-                    <span className="block text-xs text-white/45">Office</span>
+                    <span className="block text-xs text-white/80">Office</span>
                     {ADDRESS_LINE}
                   </span>
                 </a>
@@ -185,7 +185,7 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-white/10 py-6 text-center text-sm text-white/45">
+        <div className="border-t border-white/10 py-6 text-center text-sm text-white">
           <p>© {currentYear} Deoghar Travels. All rights reserved.</p>
         </div>
       </div>
