@@ -18,7 +18,6 @@ export function Footer() {
     { label: 'Home', href: '/' },
     { label: 'About', href: '/about' },
     { label: 'Packages', href: '/packages' },
-    { label: 'Contact', href: '/contact' },
     { label: 'Terms', href: '/terms' },
   ]
 
@@ -32,15 +31,16 @@ export function Footer() {
   ]
 
   return (
-    <footer className="relative mt-auto overflow-hidden bg-secondary text-white">
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,rgba(20,110,150,0.35),transparent_55%)]" />
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_right,rgba(240,160,80,0.12),transparent_45%)]" />
+    <footer className="relative mt-auto overflow-hidden bg-linear-to-br from-[#0E5A7A] via-primary to-[#1A8BB0] text-white">
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(240,160,80,0.28),transparent_50%)]" />
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,rgba(255,255,255,0.08),transparent_45%)]" />
+      <div className="pointer-events-none absolute inset-x-0 top-0 h-1 bg-linear-to-r from-accent via-white/60 to-accent" />
 
       <div className="relative z-10 mx-auto max-w-6xl px-4 pt-14 sm:px-6 md:pt-16">
         {/* Top CTA band */}
-        <div className="mb-12 flex flex-col gap-5 rounded-[1.5rem] border border-white/10 bg-white/5 p-6 backdrop-blur-sm sm:flex-row sm:items-center sm:justify-between sm:p-8">
+        <div className="mb-12 flex flex-col gap-5 rounded-2xl border border-white/25 bg-white/15 p-6 shadow-[0_20px_50px_-24px_rgba(0,0,0,0.45)] backdrop-blur-md sm:flex-row sm:items-center sm:justify-between sm:p-8">
           <div>
-            <p className="mb-1 font-accent text-xs font-semibold tracking-[0.18em] text-accent uppercase">
+            <p className="mb-2 inline-flex items-center rounded-lg bg-accent px-3 py-1 font-accent text-[11px] font-bold tracking-[0.18em] text-accent-foreground uppercase">
               Book your ride
             </p>
             <p className="font-serif text-2xl font-bold text-white md:text-3xl">
@@ -50,7 +50,7 @@ export function Footer() {
           <div className="flex flex-wrap gap-2.5">
             <a
               href={`tel:${PHONE_TEL}`}
-              className="inline-flex items-center gap-2 rounded-xl bg-primary px-5 py-3 font-accent text-sm font-semibold text-white hover:bg-primary-light"
+              className="inline-flex items-center gap-2 rounded-xl bg-white px-5 py-3 font-accent text-sm font-semibold text-primary shadow-sm hover:bg-accent hover:text-accent-foreground"
             >
               <Phone size={16} />
               Call {PHONE_DISPLAY}
@@ -71,12 +71,12 @@ export function Footer() {
           {/* Brand */}
           <div className="lg:col-span-1">
             <div className="mb-4 flex items-center gap-3">
-              <div className="flex shrink-0 items-center justify-center rounded-full bg-white p-1.5 shadow-sm">
+              <div className="flex shrink-0 items-center justify-center rounded-full bg-white p-1.5 shadow-md ring-2 ring-accent/60">
                 <BrandLogo size={48} showText={false} />
               </div>
               <div>
                 <p className="font-serif text-xl font-bold text-white">Deoghar Travels</p>
-                <p className="font-accent text-xs font-medium tracking-[0.16em] text-accent uppercase">
+                <p className="font-accent text-xs font-semibold tracking-[0.16em] text-accent uppercase">
                   Travel Agency
                 </p>
               </div>
@@ -89,7 +89,7 @@ export function Footer() {
               href={MAPS_LINK}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 font-accent text-sm font-semibold text-accent hover:brightness-110"
+              className="inline-flex items-center gap-1.5 rounded-lg bg-accent px-3 py-1.5 font-accent text-sm font-semibold text-accent-foreground hover:brightness-110"
             >
               View on map
               <ArrowUpRight size={14} />
@@ -98,7 +98,7 @@ export function Footer() {
 
           {/* Links */}
           <div>
-            <p className="mb-4 font-accent text-sm font-semibold tracking-[0.16em] text-white uppercase">
+            <p className="mb-4 inline-flex items-center rounded-md bg-white/15 px-2.5 py-1 font-accent text-xs font-bold tracking-[0.16em] text-white uppercase">
               Quick Links
             </p>
             <ul className="space-y-2.5">
@@ -106,9 +106,9 @@ export function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="group inline-flex items-center gap-2 text-sm text-white transition-colors hover:text-accent"
+                    className="group inline-flex items-center gap-2 text-sm font-medium text-white transition-colors hover:text-accent"
                   >
-                    <span className="h-1 w-1 rounded-full bg-accent transition-transform group-hover:scale-125" />
+                    <span className="h-1.5 w-1.5 rounded-full bg-accent transition-transform group-hover:scale-125" />
                     {link.label}
                   </Link>
                 </li>
@@ -118,13 +118,13 @@ export function Footer() {
 
           {/* Services */}
           <div>
-            <p className="mb-4 font-accent text-sm font-semibold tracking-[0.16em] text-white uppercase">
+            <p className="mb-4 inline-flex items-center rounded-md bg-white/15 px-2.5 py-1 font-accent text-xs font-bold tracking-[0.16em] text-white uppercase">
               Services
             </p>
             <ul className="space-y-2.5">
               {services.map((service) => (
-                <li key={service} className="flex items-center gap-2 text-sm text-white">
-                  <span className="h-1 w-1 rounded-full bg-primary-light" />
+                <li key={service} className="flex items-center gap-2 text-sm font-medium text-white">
+                  <span className="h-1.5 w-1.5 rounded-full bg-accent" />
                   {service}
                 </li>
               ))}
@@ -133,20 +133,22 @@ export function Footer() {
 
           {/* Contact */}
           <div>
-            <p className="mb-4 font-accent text-sm font-semibold tracking-[0.16em] text-white uppercase">
+            <p className="mb-4 inline-flex items-center rounded-md bg-white/15 px-2.5 py-1 font-accent text-xs font-bold tracking-[0.16em] text-white uppercase">
               Contact
             </p>
-            <ul className="space-y-4 text-sm">
+            <ul className="space-y-3 text-sm">
               <li>
                 <a
                   href={`tel:${PHONE_TEL}`}
-                  className="flex items-start gap-3 text-white transition-colors hover:text-accent"
+                  className="flex items-start gap-3 rounded-xl border border-white/20 bg-white/10 p-3 text-white transition-colors hover:bg-white/20"
                 >
-                  <span className="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-white/10 text-accent">
+                  <span className="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-accent text-accent-foreground">
                     <Phone size={14} />
                   </span>
                   <span>
-                    <span className="block text-xs text-white/80">Phone</span>
+                    <span className="block text-xs font-semibold tracking-wide text-accent uppercase">
+                      Phone
+                    </span>
                     +91 {PHONE_DISPLAY}
                   </span>
                 </a>
@@ -154,13 +156,15 @@ export function Footer() {
               <li>
                 <a
                   href={EMAIL_MAILTO}
-                  className="flex items-start gap-3 text-white transition-colors hover:text-accent"
+                  className="flex items-start gap-3 rounded-xl border border-white/20 bg-white/10 p-3 text-white transition-colors hover:bg-white/20"
                 >
-                  <span className="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-white/10 text-accent">
+                  <span className="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-accent text-accent-foreground">
                     <Mail size={14} />
                   </span>
                   <span>
-                    <span className="block text-xs text-white/80">Email</span>
+                    <span className="block text-xs font-semibold tracking-wide text-accent uppercase">
+                      Email
+                    </span>
                     <span className="break-all">{EMAIL}</span>
                   </span>
                 </a>
@@ -170,13 +174,15 @@ export function Footer() {
                   href={MAPS_LINK}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-start gap-3 text-white transition-colors hover:text-accent"
+                  className="flex items-start gap-3 rounded-xl border border-white/20 bg-white/10 p-3 text-white transition-colors hover:bg-white/20"
                 >
-                  <span className="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-white/10 text-accent">
+                  <span className="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-accent text-accent-foreground">
                     <MapPin size={14} />
                   </span>
                   <span>
-                    <span className="block text-xs text-white/80">Office</span>
+                    <span className="block text-xs font-semibold tracking-wide text-accent uppercase">
+                      Office
+                    </span>
                     {ADDRESS_LINE}
                   </span>
                 </a>
@@ -185,7 +191,7 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-white/10 py-6 text-center text-sm text-white">
+        <div className="border-t border-white/25 py-6 text-center text-sm font-medium text-white">
           <p>© {currentYear} Deoghar Travels. All rights reserved.</p>
         </div>
       </div>
