@@ -18,6 +18,7 @@ export function Footer() {
     { label: 'Home', href: '/' },
     { label: 'About', href: '/about' },
     { label: 'Packages', href: '/packages' },
+    { label: 'Car Rental', href: '/car-rental' },
     { label: 'Terms', href: '/terms' },
   ]
 

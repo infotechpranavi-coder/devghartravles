@@ -17,6 +17,7 @@ export function Header({ transparent: _transparent = false }: HeaderProps) {
     { label: 'Home', href: '/' },
     { label: 'About', href: '/about' },
     { label: 'Packages', href: '/packages' },
+    { label: 'Car Rental', href: '/car-rental' },
   ]
 
   return (
