@@ -29,8 +29,7 @@ const packages = [
   },
   {
     title: 'Parasnath Temple',
-    image:
-      'https://thumbs.dreamstime.com/b/parasnath-hills-landscape-parasnath-hills-tempel-landscape-197940177.jpg',
+    image: '/parasnath-temple.jpg',
   },
   {
     title: 'Trikuta Parvata',
@@ -44,8 +43,7 @@ const packages = [
   },
   {
     title: 'Tapovan',
-    image:
-      'https://uttarakhandtriptrek.com/wp-content/uploads/2022/04/Gangotri-Tapovan-Trekking.jpg',
+    image: '/tapovan.jpg',
   },
   {
     title: 'Mandar Hills',

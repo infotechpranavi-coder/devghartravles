@@ -1,7 +1,8 @@
 'use client'
 
-import { Phone, MessageCircle } from 'lucide-react'
+import { Phone } from 'lucide-react'
 import { PHONE_TEL, WHATSAPP_LINK } from '@/lib/contact'
+import { WhatsAppIcon } from '@/components/whatsapp-icon'
 
 export function MobileBottomBar() {
   const handleWhatsApp = () => {
@@ -23,7 +24,7 @@ export function MobileBottomBar() {
           onClick={handleWhatsApp}
           className="flex flex-1 items-center justify-center gap-2 rounded-xl bg-[#25D366] py-3.5 text-base font-semibold text-white hover:brightness-110"
         >
-          <MessageCircle size={18} />
+          <WhatsAppIcon size={18} />
           Chat
         </button>
       </div>

@@ -91,16 +91,14 @@ const places = [
     vehicle: 'Deoghar Bus Booking',
     description:
       'Primarily known for the Jain Pilgrimage, but people of all religions adore this place as a monument of immense historical and spiritual depth. If you are organizing multi-family or institutional excursions to this location, our specialized Deoghar bus booking service is always at your disposal, offering luxury seating spaces at affordable rates.',
-    image:
-      'https://thumbs.dreamstime.com/b/parasnath-hills-landscape-parasnath-hills-tempel-landscape-197940177.jpg',
+    image: '/parasnath-temple.jpg',
   },
   {
     name: 'Tapovan',
     vehicle: 'Round Trip Taxi',
     description:
       'This religious site has the Taponath Mahadev Temple, a miraculously cracked rock, and ancient caves where sages used to do meditation (tapasya). Tourists mainly come here for trekking, exploration, and introspection in nature. From dropping you off at the Tapovan to picking you up on time, our Deoghar Round Trip Taxi services take care of everything.',
-    image:
-      'https://uttarakhandtriptrek.com/wp-content/uploads/2022/04/Gangotri-Tapovan-Trekking.jpg',
+    image: '/tapovan.jpg',
   },
   {
     name: 'Mandar Hills',
