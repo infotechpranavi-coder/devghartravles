@@ -1,9 +1,12 @@
 import { Analytics } from '@vercel/analytics/next'
 import type { Metadata, Viewport } from 'next'
 import { Fraunces, Manrope, Space_Grotesk } from 'next/font/google'
+import Script from 'next/script'
 import { MobileBottomBar } from '@/components/mobile-bottom-bar'
 import { FloatingWhatsAppButton } from '@/components/floating-whatsapp-button'
 import './globals.css'
+
+const GA_MEASUREMENT_ID = 'G-8YHN70H467'
 
 const manrope = Manrope({
   subsets: ['latin'],
@@ -71,6 +74,20 @@ export default function RootLayout({
       suppressHydrationWarning
       className={`${manrope.variable} ${fraunces.variable} ${spaceGrotesk.variable}`}
     >
+      <head>
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${GA_MEASUREMENT_ID}');
+          `}
+        </Script>
+      </head>
       <body
         suppressHydrationWarning
         className="antialiased font-sans bg-background text-foreground pb-24 md:pb-0"
