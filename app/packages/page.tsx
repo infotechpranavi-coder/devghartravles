@@ -48,7 +48,14 @@ const fleet = [
   'Bus',
 ]
 
-const places = [
+const places: {
+  name: string
+  vehicle: string
+  description: string
+  image: string
+  imageClass?: string
+  imageWrapClass?: string
+}[] = [
   {
     name: 'Baba Baidyanath Dham Temple',
     vehicle: 'Local Taxi & Car Hire',
@@ -91,7 +98,8 @@ const places = [
     vehicle: 'Deoghar Bus Booking',
     description:
       'Primarily known for the Jain Pilgrimage, but people of all religions adore this place as a monument of immense historical and spiritual depth. If you are organizing multi-family or institutional excursions to this location, our specialized Deoghar bus booking service is always at your disposal, offering luxury seating spaces at affordable rates.',
-    image: '/parasnath-temple.jpg',
+    image: '/sdfg.jpeg',
+    imageClass: 'object-cover object-top',
   },
   {
     name: 'Tapovan',
@@ -322,12 +330,14 @@ export default function Packages() {
                 key={place.name}
                 className="group flex h-full flex-col overflow-hidden rounded-2xl border border-border bg-card shadow-[0_14px_32px_-18px_rgba(20,40,60,0.35)] transition-transform duration-300 hover:-translate-y-1"
               >
-                <div className="relative h-48 overflow-hidden">
+                <div
+                  className={`relative overflow-hidden ${place.imageWrapClass ?? 'h-48'}`}
+                >
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
                     src={place.image}
                     alt={place.name}
-                    className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
+                    className={`h-full w-full transition-transform duration-700 group-hover:scale-110 ${place.imageClass ?? 'object-cover'}`}
                   />
                   <div className="absolute inset-0 bg-linear-to-t from-secondary/50 to-transparent" />
                   <span className="absolute left-4 top-4 rounded-lg bg-card/95 px-2.5 py-1 font-accent text-xs font-bold tracking-wide text-primary shadow-sm">

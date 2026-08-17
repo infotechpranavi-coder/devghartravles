@@ -29,7 +29,8 @@ const packages = [
   },
   {
     title: 'Parasnath Temple',
-    image: '/parasnath-temple.jpg',
+    image: '/sdfg.jpeg',
+    imageClass: 'object-cover object-top',
   },
   {
     title: 'Trikuta Parvata',
@@ -127,7 +128,7 @@ export function PackagesCarousel() {
             <img
               src={pkg.image}
               alt={pkg.title}
-              className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+              className={`absolute inset-0 h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105 ${'imageClass' in pkg ? pkg.imageClass : ''}`}
             />
             <div className="absolute inset-0 bg-linear-to-t from-[#08131f] via-[#08131f]/55 to-[#08131f]/10" />
             <div className="absolute inset-0 bg-linear-to-br from-primary/20 via-transparent to-transparent opacity-60" />
