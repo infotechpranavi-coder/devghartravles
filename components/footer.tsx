@@ -4,12 +4,14 @@ import {
   ADDRESS_LINE,
   EMAIL,
   EMAIL_MAILTO,
+  FACEBOOK_LINK,
   MAPS_LINK,
   PHONE_DISPLAY,
   PHONE_TEL,
   WHATSAPP_LINK,
 } from '@/lib/contact'
 import { BrandLogo } from '@/components/brand-logo'
+import { FacebookIcon } from '@/components/facebook-icon'
 
 export function Footer() {
   const currentYear = new Date().getFullYear()
@@ -86,15 +88,26 @@ export function Footer() {
               Trusted Deoghar travel agency for taxi, car rental, transfers, and tours across
               Jharkhand.
             </p>
-            <a
-              href={MAPS_LINK}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 rounded-lg bg-accent px-3 py-1.5 font-accent text-sm font-semibold text-accent-foreground hover:brightness-110"
-            >
-              View on map
-              <ArrowUpRight size={14} />
-            </a>
+            <div className="flex flex-wrap items-center gap-2.5">
+              <a
+                href={MAPS_LINK}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 rounded-lg bg-accent px-3 py-1.5 font-accent text-sm font-semibold text-accent-foreground hover:brightness-110"
+              >
+                View on map
+                <ArrowUpRight size={14} />
+              </a>
+              <a
+                href={FACEBOOK_LINK}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Deoghar Travels on Facebook"
+                className="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-[#1877F2] text-white shadow-sm transition-transform hover:scale-105 hover:brightness-110"
+              >
+                <FacebookIcon size={18} />
+              </a>
+            </div>
           </div>
 
           {/* Links */}
@@ -188,12 +201,40 @@ export function Footer() {
                   </span>
                 </a>
               </li>
+              <li>
+                <a
+                  href={FACEBOOK_LINK}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-start gap-3 rounded-xl border border-white/20 bg-white/10 p-3 text-white transition-colors hover:bg-white/20"
+                >
+                  <span className="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-[#1877F2] text-white">
+                    <FacebookIcon size={14} />
+                  </span>
+                  <span>
+                    <span className="block text-xs font-semibold tracking-wide text-accent uppercase">
+                      Facebook
+                    </span>
+                    traveldeoghar
+                  </span>
+                </a>
+              </li>
             </ul>
           </div>
         </div>
 
-        <div className="border-t border-white/25 py-6 text-center text-sm font-medium text-white">
+        <div className="flex flex-col items-center justify-between gap-4 border-t border-white/25 py-6 text-sm font-medium text-white sm:flex-row">
           <p>© {currentYear} Deoghar Travels. All rights reserved.</p>
+          <a
+            href={FACEBOOK_LINK}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Follow Deoghar Travels on Facebook"
+            className="inline-flex items-center gap-2 rounded-lg bg-white/10 px-3 py-2 text-white transition-colors hover:bg-[#1877F2]"
+          >
+            <FacebookIcon size={16} />
+            Facebook
+          </a>
         </div>
       </div>
     </footer>

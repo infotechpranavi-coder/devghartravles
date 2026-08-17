@@ -9,5 +9,6 @@ export const ADDRESS_LINE =
   'Tower Chowk, Shyam Ganj Rd, near Shivay Hospital, Deoghar, Jharkhand 814112'
 export const ADDRESS_SHORT = 'Tower Chowk, Deoghar'
 export const MAPS_LINK = 'https://maps.app.goo.gl/r8yPP3TeqcWq9ZE4A'
+export const FACEBOOK_LINK = 'https://www.facebook.com/traveldeoghar/'
 export const MAPS_EMBED =
   'https://www.google.com/maps?q=Tower+Chowk,+Shyam+Ganj+Rd,+near+Shivay+Hospital,+Deoghar,+Jharkhand+814112&output=embed'
